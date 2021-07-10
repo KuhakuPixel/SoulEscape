@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+uipTa2UAIAAPMEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMlu2zAQ/RWD5yaQFyR2b63iOD1kQdwgF11ocmgRpkiBS2wn8L93SEmW6qInUe+9Gb5ZpC8itauBeWNXVvJHw4F8H5F4Jt9GPfkAB7o1ei0/odO8S+7LKKJJ80q9NIiPY5gzFXgr2Q+9VVGcIRi0FMZWS76F3DjvEBZUOUDKGh+jNUJfI3LAx9UihhzxNLmNp088LbLRCY8MtAfbSzthJ2tUQTNFqxp4tNyL57NWPZsnmcZiWsX4ehKzG6Wka70Qf6xTrTmtXcBKUMAlxdqSgagvQW5L376cg5+FcOBbU5Ye76TFFjVZyU/T9K2ibtc4+6AqxHtuZslUk/PxH/pqnGhhTfXQXTvO4hW+lGz3So+MOj/o6xC+632PU3/2VO3oRsF7CfrJrKwJmiPpbYihwcHkrn89V5aXwHY93li9AEP9/+nEGk6p+EOuZLWJ1PWsAdbKpHan2YPF0fxCw2kzXJsC0ejizcFvuh2uUEvcS+s8Um2VOtrbmGCjlCxTz2I1wefGakhwa7oGTZU/vmAafznBC25w7QVzT+PH0l7ect03cBGS4F6fZRfUi9mfh+VKs38EVz4Hr6SG3nQknrBPudG6WbBhT7qwdbCCskHYNkj+92qRuZjTBQgQNxkHMZ1cTZnI2JSx6XQh6O3NLUm7JzXWSdVLY7RtD05N98k17ln3DxmtLK3TsnNL9yv5WZlBy6UWZs0sgH5uMpyNg8VL8LPkSy6xQWvwXuo0b/JVEGXYDnhxTlSkSpcHb2nRZylILT+Mj0hB8vTTKMiJnP4AUEsDBBQAAAgIAACYn+tB7bx+bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSRZpFomVqWmqamUFKapqxka5xcppBsnFysrGxZVqiuZm5UixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+uipTa2UAIAAPMEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+tB7bx+bQAAAHgAAAAJACQAAAAAAAAAAAAAAJ0CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAVQMAAAAA
+    dataString: UEsDBBQAAAgIAAA4IeyipTa2UAIAAPMEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMlu2zAQ/RWD5yaQFyR2b63iOD1kQdwgF11ocmgRpkiBS2wn8L93SEmW6qInUe+9Gb5ZpC8itauBeWNXVvJHw4F8H5F4Jt9GPfkAB7o1ei0/odO8S+7LKKJJ80q9NIiPY5gzFXgr2Q+9VVGcIRi0FMZWS76F3DjvEBZUOUDKGh+jNUJfI3LAx9UihhzxNLmNp088LbLRCY8MtAfbSzthJ2tUQTNFqxp4tNyL57NWPZsnmcZiWsX4ehKzG6Wka70Qf6xTrTmtXcBKUMAlxdqSgagvQW5L376cg5+FcOBbU5Ye76TFFjVZyU/T9K2ibtc4+6AqxHtuZslUk/PxH/pqnGhhTfXQXTvO4hW+lGz3So+MOj/o6xC+632PU3/2VO3oRsF7CfrJrKwJmiPpbYihwcHkrn89V5aXwHY93li9AEP9/+nEGk6p+EOuZLWJ1PWsAdbKpHan2YPF0fxCw2kzXJsC0ejizcFvuh2uUEvcS+s8Um2VOtrbmGCjlCxTz2I1wefGakhwa7oGTZU/vmAafznBC25w7QVzT+PH0l7ect03cBGS4F6fZRfUi9mfh+VKs38EVz4Hr6SG3nQknrBPudG6WbBhT7qwdbCCskHYNkj+92qRuZjTBQgQNxkHMZ1cTZnI2JSx6XQh6O3NLUm7JzXWSdVLY7RtD05N98k17ln3DxmtLK3TsnNL9yv5WZlBy6UWZs0sgH5uMpyNg8VL8LPkSy6xQWvwXuo0b/JVEGXYDnhxTlSkSpcHb2nRZylILT+Mj0hB8vTTKMiJnP4AUEsDBBQAAAgIAAA4IexB7bx+bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSRZpFomVqWmqamUFKapqxka5xcppBsnFysrGxZVqiuZm5UixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAA4IeyipTa2UAIAAPMEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAA4IexB7bx+bQAAAHgAAAAJACQAAAAAAAAAAAAAAJ0CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAVQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -207,7 +207,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &240833357
 GameObject:
@@ -237,7 +237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &359539377
 GameObject:
@@ -335,7 +335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &359539381
 BoxCollider2D:
@@ -445,7 +445,7 @@ Transform:
   m_LocalScale: {x: 0.928, y: 3.9748, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &396973925
 BoxCollider2D:
@@ -640,7 +640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &888847440
 GameObject:
@@ -732,7 +732,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102429582
 GameObject:
@@ -768,7 +768,8 @@ MonoBehaviour:
   - {fileID: 396249183}
   - {fileID: 1995313645}
   flare: {fileID: 3271465237366097507, guid: 00ea34c8afb31c6469580c55f6e0a3c2, type: 3}
-  maxDistanceBetweenFlare: 0
+  minDistanceBetweenFlare: 10
+  maxAmountOfFlare: 10
 --- !u!114 &1102429584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,13 +789,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102429582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.8540654, y: -0.15216911, z: -10.228734}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.8540654, y: -0.15216899, z: -10.228734}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 907358526}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265452160
 GameObject:
@@ -909,7 +910,7 @@ Transform:
   m_LocalScale: {x: 0.928, y: 3.9748, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1386886054
 BoxCollider2D:
@@ -1040,7 +1041,7 @@ Transform:
   m_LocalScale: {x: 0.928, y: 3.9748, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1613585486
 BoxCollider2D:
@@ -1171,7 +1172,7 @@ Transform:
   m_LocalScale: {x: 0.9280002, y: 3.9748008, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 79.243}
 --- !u!61 &1633667254
 BoxCollider2D:
@@ -1285,7 +1286,7 @@ GameObject:
   - component: {fileID: 1695443886}
   - component: {fileID: 1695443885}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1350,12 +1351,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695443881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.9, y: 18.1, z: 0}
-  m_LocalScale: {x: 11.771848, y: 11.771848, z: 11.771848}
+  m_LocalPosition: {x: -16.8, y: 5.5, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 11.771848}
   m_Children:
   - {fileID: 888847441}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1695443884
 MonoBehaviour:
@@ -1370,6 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionPoint: {fileID: 888847441}
+  detectionRadius: 0.2
   detectionLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1440,7 +1442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1711102070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,7 +1584,7 @@ Transform:
   m_LocalScale: {x: 1.3944004, y: 1.7250093, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1711102075
 BoxCollider2D:
@@ -1671,7 +1673,7 @@ Transform:
   m_LocalScale: {x: 0.928, y: 3.9748, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2009884646
 BoxCollider2D:

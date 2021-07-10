@@ -5,7 +5,7 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
     public Transform detectionPoint;
-    private const float detectionRadius = 0.2f;
+    public  float detectionRadius = 0.2f;
     public LayerMask detectionLayer;
     void Update()
     {
