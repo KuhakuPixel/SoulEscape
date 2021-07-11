@@ -43,5 +43,8 @@ public class CameraMovement : MonoBehaviour
     public void SetNewTarget(Transform newTarget)
     {
         this.transformToFollow = newTarget;
+
+        int var = 3;
+        Debug.Log("Shii" + var);
     }
 }
