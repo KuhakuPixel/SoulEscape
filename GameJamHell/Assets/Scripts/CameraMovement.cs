@@ -16,6 +16,8 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         transform.position = transformToFollow.position - this.offSet;
+        //Trans.position = Vector3.Lerp(Trans.position, _cam, CamMoveSpeed * Time.deltaTime);
+        //transform.position=
     }
 
     public void SetNewTarget(Transform newTarget)
