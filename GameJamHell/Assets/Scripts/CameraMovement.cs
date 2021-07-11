@@ -24,7 +24,7 @@ public class CameraMovement : MonoBehaviour
 
         Vector3 direction = (transformToFollow.position-this.offSet) - transform.position;
         float distanceToNewTarget = direction.magnitude;
-        Debug.Log(distanceToNewTarget);
+        
         if (distanceToNewTarget <= 2f)
         {
             transform.position = transformToFollow.position - this.offSet;
