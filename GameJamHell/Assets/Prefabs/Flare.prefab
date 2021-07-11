@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376952912753803511}
   - component: {fileID: 6079993604258111689}
+  - component: {fileID: 9095220304726030605}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9095220304726030605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3271465237366097507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ecc4ca7e25153c9998be879bbdb0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionPoint: {fileID: 0}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 8

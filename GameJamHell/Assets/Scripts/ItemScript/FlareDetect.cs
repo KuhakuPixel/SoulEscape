@@ -1,27 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class FlareDetect : MonoBehaviour
 {
-    public Transform detectionPoint;
-    private const float detectionRadius = 0.2f;
-    public LayerMask detectionLayer;
-    void Update()
+    public UnityEvent flareInvokedEvent;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(DetectObject())
+        if (collision.tag == "Player")
         {
-            gameObject.SetActive(false);
+            flareInvokedEvent.Invoke();
+            Debug.Log("Player");
         }
-    }
-
-    bool InteractiveInput()
-    {
-        return Input.GetKeyDown(KeyCode.E);
-    }
-
-    bool DetectObject()
-    {
-        return Physics2D.OverlapCircle(detectionPoint.position,detectionRadius,detectionLayer);
     }
 }
