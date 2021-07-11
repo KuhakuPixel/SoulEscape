@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    
         Vector2 inputVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         if (inputVector.magnitude > 1)
@@ -24,4 +24,6 @@ public class PlayerScript : MonoBehaviour
         transform.Translate(new Vector3(inputVector.x, inputVector.y, 0f) * playerSpeed * Time.deltaTime, Space.World);
 
     }
+
+
 }

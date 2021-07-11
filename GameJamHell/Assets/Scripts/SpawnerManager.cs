@@ -10,7 +10,7 @@ public class SpawnerManager : MonoBehaviour
     private List<GameObject> generatedFlares = new List<GameObject>();
     public float minDistanceBetweenFlare;
     public float maxAmountOfFlare = 0f;
-
+    public static  SpawnerManager instance;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,6 +18,7 @@ public class SpawnerManager : MonoBehaviour
         {
             throw new System.ArgumentException("spawnFlareCoordinates's length must be exactly 2");
         }
+        instance = this;
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class SpawnerManager : MonoBehaviour
         }
     }
 
-    void SpawnFlareRandomly()
+    public void SpawnFlareRandomly()
     {
 
        
