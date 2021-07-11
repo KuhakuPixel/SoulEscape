@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     public float playerSpeed = 0f;
     public List<Puppet> puppets = new List<Puppet>();
     public Puppet selectedPuppet;
+    public int flareCount = 0;
     // Start is called before the first frame update
     private void Awake()
     {
