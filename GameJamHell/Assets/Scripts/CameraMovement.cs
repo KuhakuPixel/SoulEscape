@@ -5,8 +5,11 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Transform transformToFollow;
+
     private Vector3 offSet;
- 
+    private Vector3 moveTo;
+    public float camMoveSpeed = 0f;
+    private float tolerenceRange = 1f;
     void Start()
     {
         this.offSet = transformToFollow.position - transform.position;
@@ -15,9 +18,26 @@ public class CameraMovement : MonoBehaviour
   
     void LateUpdate()
     {
-        transform.position = transformToFollow.position - this.offSet;
-        //Trans.position = Vector3.Lerp(Trans.position, _cam, CamMoveSpeed * Time.deltaTime);
-        //transform.position=
+
+       
+
+
+        Vector3 direction = (transformToFollow.position-this.offSet) - transform.position;
+        float distanceToNewTarget = direction.magnitude;
+        Debug.Log(distanceToNewTarget);
+        if (distanceToNewTarget <= 2f)
+        {
+            transform.position = transformToFollow.position - this.offSet;
+
+        }
+        else
+        {
+            moveTo = Vector2.Lerp(transform.position, transformToFollow.position, camMoveSpeed * Time.deltaTime);
+            transform.position = new Vector3(moveTo.x, moveTo.y, transform.position.z);
+        }
+
+        
+        
     }
 
     public void SetNewTarget(Transform newTarget)
