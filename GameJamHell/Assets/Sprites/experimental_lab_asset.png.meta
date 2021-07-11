@@ -76,7 +76,7 @@ TextureImporter:
     second: experimental_lab_asset_4
   - first:
       213: 7112695127735106139
-    second: experimental_lab_asset_5
+    second: AlienPods
   - first:
       213: 2175416438641171538
     second: Generator
@@ -316,7 +316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: experimental_lab_asset_5
+      name: AlienPods
       rect:
         serializedVersion: 2
         x: 0
