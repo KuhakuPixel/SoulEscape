@@ -110,6 +110,12 @@ TextureImporter:
   - first:
       213: 782498203402223879
     second: Enemy
+  - first:
+      213: -1866208505973180578
+    second: SideWall
+  - first:
+      213: -1876912440319012695
+    second: SideDoor
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -526,27 +532,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: experimental_lab_asset_18
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 12
-        width: 18
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2deae25d053c32e20800000000000000
-      internalID: 3324715701870964434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Enemy
       rect:
         serializedVersion: 2
@@ -563,6 +548,48 @@ TextureImporter:
       bones: []
       spriteID: 701cb2b58fdfbda00800000000000000
       internalID: 782498203402223879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWall
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 12
+        width: 3
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57f7ac5045e916e0800000000000000
+      internalID: -1866208505973180578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideDoor
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 12
+        width: 8
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a01640741ed3f5e0800000000000000
+      internalID: -1876912440319012695
       vertices: []
       indices: 
       edges: []
