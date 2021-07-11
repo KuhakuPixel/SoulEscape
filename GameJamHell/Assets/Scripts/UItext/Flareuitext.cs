@@ -3,19 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*public class Flareuitext : MonoBehaviour
+public class Flareuitext : MonoBehaviour
 {
-    PlayerScript playerScript;
-    public GameObject uitext;
+    private int flareCount = 0;
+    public Text uitext;
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = GameObject.FindObjectOfType<PlayerScript>();
-        uitext.FindObjectOfType<Text>().text = playerScript.flareCount;
+        //playerScript = GameObject.FindObjectOfType<PlayerScript>();
+        uitext.GetComponent<Text>().text = flareCount + "/4";
 
     }
-    public void TextChange(){
-        uitext.FindObjectOfType<Text>().text = playerScript.flareCount;
+    void Update()
+    {
+        if(InteractiveInput()){
+            flareCount++;
+            uitext.GetComponent<Text>().text = flareCount + "/4";
+        }
+    }
+    bool InteractiveInput()
+    {
+        return Input.GetKeyDown(KeyCode.G);
     }
 
-}*/
+
+}
