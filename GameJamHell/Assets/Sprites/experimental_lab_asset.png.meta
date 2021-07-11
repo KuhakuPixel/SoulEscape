@@ -1,7 +1,64 @@
 fileFormatVersion: 2
-guid: 6d3ea6d85f4404446838f7c29706e403
+guid: 65b9de3ef427bc945be69f64a3883067
 TextureImporter:
   internalIDToNameTable:
+  - first:
+      213: -6881496950693269772
+    second: experimental_lab_asset2_0
+  - first:
+      213: 2926090395123704333
+    second: experimental_lab_asset2_1
+  - first:
+      213: -3926570519766633412
+    second: experimental_lab_asset2_2
+  - first:
+      213: 1919512574114973732
+    second: experimental_lab_asset2_3
+  - first:
+      213: -3266238467018560009
+    second: experimental_lab_asset2_4
+  - first:
+      213: -2339671224960534755
+    second: experimental_lab_asset2_5
+  - first:
+      213: 5929341313719937197
+    second: experimental_lab_asset2_6
+  - first:
+      213: 7601597678628463346
+    second: experimental_lab_asset2_7
+  - first:
+      213: 8919092424256531399
+    second: experimental_lab_asset2_8
+  - first:
+      213: -7936988071597391574
+    second: experimental_lab_asset2_9
+  - first:
+      213: 4810812809491248926
+    second: experimental_lab_asset2_10
+  - first:
+      213: 7666224975811621339
+    second: experimental_lab_asset2_11
+  - first:
+      213: -3635668820240617348
+    second: experimental_lab_asset2_12
+  - first:
+      213: -2218826322013148596
+    second: experimental_lab_asset2_13
+  - first:
+      213: 572189565663642696
+    second: experimental_lab_asset2_14
+  - first:
+      213: -6770960574922368600
+    second: experimental_lab_asset2_15
+  - first:
+      213: 4742073152486483408
+    second: experimental_lab_asset2_16
+  - first:
+      213: 5824806563112762825
+    second: experimental_lab_asset2_17
+  - first:
+      213: -8779674594754144500
+    second: experimental_lab_asset2_18
   - first:
       213: 422751765706444882
     second: experimental_lab_asset_0
@@ -22,19 +79,37 @@ TextureImporter:
     second: experimental_lab_asset_5
   - first:
       213: 2175416438641171538
-    second: experimental_lab_asset_6
-  - first:
-      213: 782498203402223879
-    second: experimental_lab_asset_7
-  - first:
-      213: -1866208505973180578
-    second: MainCharacter
+    second: Generator
   - first:
       213: 3719529772028554038
     second: experimental_lab_asset_9
   - first:
-      213: -1876912440319012695
-    second: experimental_lab_asset_10
+      213: -6491040584228548771
+    second: Player
+  - first:
+      213: 4812203231007590515
+    second: experimental_lab_asset_12
+  - first:
+      213: 8549429008761432434
+    second: experimental_lab_asset_13
+  - first:
+      213: -6451949613030737094
+    second: experimental_lab_asset_14
+  - first:
+      213: 6193813850036899960
+    second: experimental_lab_asset_15
+  - first:
+      213: -2413151258839806893
+    second: experimental_lab_asset_16
+  - first:
+      213: 8365949004226050935
+    second: experimental_lab_asset_17
+  - first:
+      213: 3324715701870964434
+    second: experimental_lab_asset_18
+  - first:
+      213: 782498203402223879
+    second: Enemy
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -262,7 +337,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: experimental_lab_asset_6
+      name: Generator
       rect:
         serializedVersion: 2
         x: 48
@@ -283,55 +358,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: experimental_lab_asset_7
+      name: experimental_lab_asset_9
       rect:
         serializedVersion: 2
         x: 60
         y: 132
         width: 12
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 701cb2b58fdfbda00800000000000000
-      internalID: 782498203402223879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MainCharacter
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 120
-        width: 21
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e57f7ac5045e916e0800000000000000
-      internalID: -1866208505973180578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: experimental_lab_asset_9
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 122
-        width: 7
-        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,7 +379,49 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: experimental_lab_asset_10
+      name: Player
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 120
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fc96acaf03be5a0800000000000000
+      internalID: -6491040584228548771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: experimental_lab_asset_12
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 122
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378c13ba75168c240800000000000000
+      internalID: 4812203231007590515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: experimental_lab_asset_13
       rect:
         serializedVersion: 2
         x: 37
@@ -360,8 +435,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a01640741ed3f5e0800000000000000
-      internalID: -1876912440319012695
+      spriteID: 27925abf26ca5a670800000000000000
+      internalID: 8549429008761432434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: experimental_lab_asset_14
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 84
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b7596c2021676a0800000000000000
+      internalID: -6451949613030737094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: experimental_lab_asset_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 72
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870185061e8d4f550800000000000000
+      internalID: 6193813850036899960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: experimental_lab_asset_16
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c019b27b3c28ed0800000000000000
+      internalID: -2413151258839806893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: experimental_lab_asset_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 12
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b3ded6b42d91470800000000000000
+      internalID: 8365949004226050935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: experimental_lab_asset_18
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 12
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2deae25d053c32e20800000000000000
+      internalID: 3324715701870964434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 115
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701cb2b58fdfbda00800000000000000
+      internalID: 782498203402223879
       vertices: []
       indices: 
       edges: []

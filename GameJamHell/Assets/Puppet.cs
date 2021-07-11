@@ -23,7 +23,7 @@ public class Puppet : MonoBehaviour
         {
             Vector3 moveDir = moveDirection;
             transform.Translate(moveDir * speed * Time.deltaTime, Space.World);
-            Debug.Log("move puppet");
+          
         }
         
     }
