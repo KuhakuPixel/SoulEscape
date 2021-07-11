@@ -17,4 +17,9 @@ public class CameraMovement : MonoBehaviour
     {
         transform.position = transformToFollow.position - this.offSet;
     }
+
+    public void SetNewTarget(Transform newTarget)
+    {
+        this.transformToFollow = newTarget;
+    }
 }
