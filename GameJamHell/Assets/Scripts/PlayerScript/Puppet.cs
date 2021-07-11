@@ -5,10 +5,11 @@ using UnityEngine;
 public class Puppet : MonoBehaviour
 {
     private bool isPuppetSelected=false;
+    private Rigidbody2D playerRB;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerRB = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -22,8 +23,8 @@ public class Puppet : MonoBehaviour
         if (this.isPuppetSelected)
         {
             Vector3 moveDir = moveDirection;
-            transform.Translate(moveDir * speed * Time.deltaTime, Space.World);
-          
+          //  transform.Translate(moveDir * speed * Time.deltaTime, Space.World);
+            playerRB.velocity = moveDir * speed * Time.deltaTime;
         }
         
     }
