@@ -3481,6 +3481,7 @@ MonoBehaviour:
   - {fileID: 1157446025}
   - {fileID: 2094188348}
   selectedPuppet: {fileID: 359539383}
+  flareCount: 0
 --- !u!1 &1695443881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,6 +4046,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8250688865359189976, guid: 31c08f44c0874a441afc55bf973eac4a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3856681
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250688865359189976, guid: 31c08f44c0874a441afc55bf973eac4a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16626705
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250688865359189976, guid: 31c08f44c0874a441afc55bf973eac4a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0006559789
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250688865359189976, guid: 31c08f44c0874a441afc55bf973eac4a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.31969988
+      objectReference: {fileID: 0}
     - target: {fileID: 8250688865359189977, guid: 31c08f44c0874a441afc55bf973eac4a, type: 3}
       propertyPath: m_RootOrder
       value: 3
