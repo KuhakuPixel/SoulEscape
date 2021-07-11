@@ -10,12 +10,12 @@ using UnityEngine.UI;
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = GameObject.getComponent<PlayerScript>();
-        uitext.GetComponent<Text>().text = playerScript.flareCount;
+        playerScript = GameObject.FindObjectOfType<PlayerScript>();
+        uitext.FindObjectOfType<Text>().text = playerScript.flareCount;
 
     }
     public void TextChange(){
-        uitext.GetComponent<Text>().text = playerScript.flareCount;
+        uitext.FindObjectOfType<Text>().text = playerScript.flareCount;
     }
 
 }*/

@@ -11,7 +11,7 @@ public class FlareDetect : MonoBehaviour
         if (collision.tag == "Player")
         {
             flareInvokedEvent.Invoke();
-            playerScript = GameObject.GetComponent<PlayerScript>();
+            playerScript = GameObject.FindObjectOfType<PlayerScript>();
             playerScript.flareCount++;
         }
     }
