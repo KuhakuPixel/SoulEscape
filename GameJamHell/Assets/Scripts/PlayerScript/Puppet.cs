@@ -56,8 +56,8 @@ public class Puppet : MonoBehaviour
             }
         }
 
-        if(!isPuppetSelected) {
-            playerRB.velocity = new Vector2(0,0);
+        if (!isPuppetSelected) {
+            playerRB.velocity = new Vector2(0, 0);
             puppetAnimator.SetBool("isWalking", false);
         }
     }
@@ -67,7 +67,7 @@ public class Puppet : MonoBehaviour
         if (this.isPuppetSelected)
         {
             moveDir = moveDirection;
-            if (moveDir.x!= 0||moveDir.y!=0)
+            if (moveDir.x != 0 || moveDir.y != 0)
             {
                 puppetAnimator.SetBool("isWalking", true);
             }
@@ -90,7 +90,7 @@ public class Puppet : MonoBehaviour
 
     }
 
-    
+
     public bool IsSelectedPuppetInThisRadius()
     {
         Vector3 selectedPuppetPosition = playerScript.selectedPuppet.transform.position;
@@ -106,6 +106,9 @@ public class Puppet : MonoBehaviour
         }
 
 
+
+       
+    }
 
     public void CapturePuppet()
     {
@@ -136,7 +139,7 @@ public class Puppet : MonoBehaviour
     public void SelectPuppet()
     {
 
-       
+
 
         this.isPuppetSelected = true;
 
