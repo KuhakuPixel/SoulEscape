@@ -785,18 +785,12 @@ MonoBehaviour:
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
   showGraphs: 1
---- !u!1 &378426772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5923760430832888704, guid: 230322a5bb0655213a60f1113285096d, type: 3}
+--- !u!114 &378426773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 378426773, guid: 230322a5bb0655213a60f1113285096d, type: 3}
   m_PrefabInstance: {fileID: 866600782}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &378426773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378426772}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eab8da87f78400d4386e269329ed6740, type: 3}
@@ -809,14 +803,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4103190538807539314, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4103190538807539314, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5377345780617043663, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -964,7 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723880794d9db6b4793f510dc255e64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 100
+  playerSpeed: 50
   puppets:
   - {fileID: 1897275327}
   - {fileID: 459947641}
@@ -32045,10 +32031,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2226339810208584108, guid: 230322a5bb0655213a60f1113285096d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5923760430832888704, guid: 230322a5bb0655213a60f1113285096d, type: 3}
       propertyPath: m_Name
       value: Puppet_Yellow Variant
@@ -32214,7 +32196,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 0.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
