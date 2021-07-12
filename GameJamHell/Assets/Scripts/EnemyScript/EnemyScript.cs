@@ -8,12 +8,12 @@ public class EnemyScript : MonoBehaviour
     public float captureRadius=0f;
     AIDestinationSetter enemyDestinationSetter;
     PlayerScript playerScript;
-    
+    private Animator animator;
     /// <summary>
     /// called when enemy captured the puppet
     /// </summary>
     public UnityEvent onPuppetCaptured;
-
+    public SpriteRenderer enemySprite;
     void OnDrawGizmosSelected()
     {
         // Display the explosion radius when selected
@@ -25,7 +25,8 @@ public class EnemyScript : MonoBehaviour
     {
         playerScript = GameObject.FindObjectOfType<PlayerScript>();
         this.enemyDestinationSetter = this.GetComponent<AIDestinationSetter>();
-
+        animator = GetComponent<Animator>();
+        enemySprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -52,6 +53,19 @@ public class EnemyScript : MonoBehaviour
                
 
                 
+            }
+        }
+
+        if (enemyDestinationSetter.target!=null)
+        {
+            Vector3 currentEnemyPosition = enemyDestinationSetter.target.position;
+            if (currentEnemyPosition.x<transform.position.x)
+            {
+                enemySprite.flipX = true;
+            }
+            else if (currentEnemyPosition.x > transform.position.x)
+            {
+                enemySprite.flipX = false;
             }
         }
     }

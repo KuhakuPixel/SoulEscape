@@ -37903,10 +37903,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3265158638102603618, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
-      propertyPath: captureRadius
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 3265158638102603620, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -37951,10 +37947,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3265158638102603623, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3265158638102603624, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: target
       value: 
@@ -37962,10 +37954,6 @@ PrefabInstance:
     - target: {fileID: 3265158638102603627, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: m_Name
       value: EnemyScary
-      objectReference: {fileID: 0}
-    - target: {fileID: 3265158638102603627, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
