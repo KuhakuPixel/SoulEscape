@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     public List<Puppet> puppets = new List<Puppet>();
     public Puppet selectedPuppet;
     public int flareCount = 0;
+
+    public Transform lightTransform;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -42,6 +44,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SelectNewDoll(0);
@@ -66,6 +69,7 @@ public class PlayerScript : MonoBehaviour
         }
         selectedPuppet.MovePuppet(inputVector, playerSpeed);
 
+        lightTransform.position = selectedPuppet.transform.position;
 
     }
 

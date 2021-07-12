@@ -53,11 +53,11 @@ public class Puppet : MonoBehaviour
                     }
                 }
             }
+        }
 
-            if(!isPuppetSelected) {
-                playerRB.velocity = new Vector2(0,0);
-                puppetAnimator.SetBool("isWalking", false);
-            }
+        if(!isPuppetSelected) {
+            playerRB.velocity = new Vector2(0,0);
+            puppetAnimator.SetBool("isWalking", false);
         }
     }
 
