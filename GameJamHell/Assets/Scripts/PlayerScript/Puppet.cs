@@ -18,6 +18,7 @@ public class Puppet : MonoBehaviour
     private SpriteRenderer puppetSprite;
 
     public bool IsPuppetSealed { get => isPuppetSealed; }
+    public bool IsPuppetSelected { get => isPuppetSelected; }
 
     void OnDrawGizmosSelected()
     {
@@ -88,6 +89,11 @@ public class Puppet : MonoBehaviour
         }
 
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0f5248e24d5e420b76262aeff3c17311c438920b
     
     public bool IsSelectedPuppetInThisRadius()
     {
@@ -103,7 +109,14 @@ public class Puppet : MonoBehaviour
             return false;
         }
 
+>>>>>>> 0f5248e24d5e420b76262aeff3c17311c438920b
 
+    public void CapturePuppet()
+    {
+        this.SealPuppet();
+        playerScript.ForcePlayerToMoveToAnotherPuppet();
+        Color oldPuppetColor = this.GetComponent<SpriteRenderer>().color;
+        this.GetComponent<SpriteRenderer>().color = new Color(oldPuppetColor.r, oldPuppetColor.g, oldPuppetColor.b, 50f);
     }
     /// <summary>
     /// Player can unseal another puppet
@@ -127,7 +140,7 @@ public class Puppet : MonoBehaviour
     public void SelectPuppet()
     {
 
-        Debug.Log("Puppet  is Sealed");
+       
 
         this.isPuppetSelected = true;
 
