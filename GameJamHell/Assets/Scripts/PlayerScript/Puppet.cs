@@ -7,7 +7,7 @@ public class Puppet : MonoBehaviour
     public float puppetInteractionRadius = 0f;
 
     private bool isPuppetSelected = false;
-    public bool isPuppetSealed = false;
+    private bool isPuppetSealed = false;
     private Vector2 moveDir;
 
 
@@ -18,6 +18,7 @@ public class Puppet : MonoBehaviour
     private SpriteRenderer puppetSprite;
 
     public bool IsPuppetSealed { get => isPuppetSealed; }
+    public bool IsPuppetSelected { get => isPuppetSelected; }
 
     void OnDrawGizmosSelected()
     {
@@ -55,8 +56,8 @@ public class Puppet : MonoBehaviour
             }
         }
 
-        if(!isPuppetSelected) {
-            playerRB.velocity = new Vector2(0,0);
+        if (!isPuppetSelected) {
+            playerRB.velocity = new Vector2(0, 0);
             puppetAnimator.SetBool("isWalking", false);
         }
     }
@@ -66,7 +67,7 @@ public class Puppet : MonoBehaviour
         if (this.isPuppetSelected)
         {
             moveDir = moveDirection;
-            if (moveDir.x!= 0||moveDir.y!=0)
+            if (moveDir.x != 0 || moveDir.y != 0)
             {
                 puppetAnimator.SetBool("isWalking", true);
             }
@@ -88,22 +89,17 @@ public class Puppet : MonoBehaviour
         }
 
     }
+
+
     
-    public bool IsSelectedPuppetInThisRadius()
+
+    public void CapturePuppet()
     {
-        Vector3 selectedPuppetPosition = playerScript.selectedPuppet.transform.position;
-
-        float distanceBetweenSelectedPuppet = Vector3.Distance(transform.position, selectedPuppetPosition);
-        if (distanceBetweenSelectedPuppet <= puppetInteractionRadius)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-
-
+        this.SealPuppet();
+        
+        Color oldPuppetColor = this.GetComponent<SpriteRenderer>().color;
+        this.GetComponent<SpriteRenderer>().color = new Color(oldPuppetColor.r, oldPuppetColor.g, oldPuppetColor.b, oldPuppetColor.a/3);
+        Debug.Log("Puppet captured");
     }
     /// <summary>
     /// Player can unseal another puppet
@@ -115,6 +111,10 @@ public class Puppet : MonoBehaviour
     public void SealPuppet()
     {
         this.isPuppetSealed = true;
+        if (playerScript.selectedPuppet == this)
+        {
+            playerScript.ForcePlayerToMoveToAnotherPuppet();
+        }
     }
     public void UnSealPuppet()
     {
@@ -127,7 +127,7 @@ public class Puppet : MonoBehaviour
     public void SelectPuppet()
     {
 
-        Debug.Log("Puppet  is Sealed");
+
 
         this.isPuppetSelected = true;
 

@@ -88,10 +88,38 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
+            Debug.Log("Puppet is sealed , Cannot teleport Nub");
             onSelectingSealedPuppet.Invoke();
         }
 
         GameObject.FindObjectOfType<CameraMovement>().SetNewTarget(selectedPuppet.transform);
 
+    }
+    public void ForcePlayerToMoveToAnotherPuppet()
+    {
+        for(int i = 0; i < puppets.Count; i++)
+        {
+            if (!puppets[i].IsPuppetSelected && !puppets[i].IsPuppetSealed)
+            {
+                SelectNewDoll(i);
+                return;
+            }
+        }
+
+        Debug.Log("no unsealed puppet remaining ");
+        //if no puppet left then game over
+    }
+
+    public int GetUnsealedPuppetCount()
+    {
+        int count = 0;
+        for(int i = 0; i < puppets.Count; i++)
+        {
+            if (!puppets[i].IsPuppetSealed)
+            {
+                count++; 
+            }
+        }
+        return count;
     }
 }

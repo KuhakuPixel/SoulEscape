@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3265158638102603618}
   - component: {fileID: 3265158638102603626}
   m_Layer: 0
-  m_Name: Enemy.2
+  m_Name: Enemy.2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,6 +204,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede5d890b96fc0f4b96b9b9a3139d798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  captureRadius: 0.3
+  onPuppetCaptured:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &3265158638102603626
 Animator:
   serializedVersion: 3
