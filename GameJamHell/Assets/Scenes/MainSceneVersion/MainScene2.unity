@@ -774,6 +774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puppet_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 8368135561002208350, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
 --- !u!4 &481399138 stripped
@@ -845,6 +849,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3265158638102603618, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
+      propertyPath: captureRadius
+      value: 0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 3265158638102603620, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -905,6 +913,10 @@ PrefabInstance:
     - target: {fileID: 1544296135581887198, guid: 22a52c61f8efd1fde8c6ddb9bad71035, type: 3}
       propertyPath: m_Name
       value: Puppet_Purple Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544296135581887198, guid: 22a52c61f8efd1fde8c6ddb9bad71035, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3165974104932874319, guid: 22a52c61f8efd1fde8c6ddb9bad71035, type: 3}
       propertyPath: m_RootOrder
@@ -34509,6 +34521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puppet_Yellow Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5923760430832888704, guid: 230322a5bb0655213a60f1113285096d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7833115666453969169, guid: 230322a5bb0655213a60f1113285096d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -35786,6 +35802,10 @@ PrefabInstance:
     - target: {fileID: 2554179988480972893, guid: f599e05308710055d99faedda50b8e29, type: 3}
       propertyPath: m_Name
       value: Puppet_Green Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554179988480972893, guid: f599e05308710055d99faedda50b8e29, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6292606055090097084, guid: f599e05308710055d99faedda50b8e29, type: 3}
       propertyPath: puppetInteractionRadius
@@ -37742,6 +37762,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   selectedPuppet: {fileID: 481399139}
+  amountOfPaperToStartGenerator: 0
 --- !u!1 &1851160670
 GameObject:
   m_ObjectHideFlags: 0
@@ -37787,7 +37808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAA4IexX1iPXbAIAABQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zozAM/SsZnzcZCG0+9rZL03QP/ZimO71wcWwRPDE2Y5smaSf/fWUDgU25YKQn6T1J5osIZStgTpu1EfxRcyA/R8SfyY9R73yAI91ptRGf0GHeBXeFB9GAeaVOaLTHPszqEpwR7JfaSQ+O0FgrkWtTrvgOUm2dRXNOpQV0Ge18tELT14gc8TVe+pATnqZzf/rE0zIanfHIQDkwPbQDxpPoZhHd3t4mLb6B14pJWlbAPfc+Ku7C5pN55J/pMsAVqmuR0cRrYVpKYVtyxJ2qID6lla1RGgK4oCg2MIonvnYBYlc4T30Y/pznFlzL19DTnTDYtSYv+a2bVpbU7huOH1TWvlIybWQ0SR+/+cdxcOdGlw9d3TjyNVwh2P6Vnhi1btDrofluQD206kDlnm4lvBegnvTa6FpxdDpT+9DawvSu/7xISwtg+97eUL0y1tX3iU0nyeImXsyS2WoczdupeUHn0IpjKkW5DYO4aQwbqUP7w3KAwVH9QfZhdWybF62e0l8Lb3Q33LHWcS+MdehqJSvPdatr46FkFRropdUu1UZBMLcKKlBUutMLpnHX87zyDcpeee6pv01t8dbXXZKrkGDu8VF05XrRh8vkbKEPj2CL59pJoaAn7R1P2KdUK9Ws27AnXdimNjllg7BdLfj/e0YW+YIuIYd8FnHIk+k4YXnEEsaSZJnT+WxOwiIKhTqpfGmItu3Bqak+ucKl634yo7WhVVh9buhhLT5LPWi5ULneMAOgnpsMF+JgsAheU77iAhu0AeeECvMmXxmRmu2BZ5dEWVC6OjpDsz5LRirxoZ23ZCQNf5WMnMn5H1BLAwQUAAAICAAAOCHsQe28fm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kkWaRaJlalpqmplBSmqasZGucXKaQbJxcrKxsWVaormZuVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAOCHsV9Yj12wCAAAUBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAOCHsQe28fm0AAAB4AAAACQAkAAAAAAAAAAAAAAC5AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHEDAAAAAA==
+    dataString: UEsDBBQAAAgIAAA4IewVVpp3bAIAABYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK54WyccJjb7sOIXvIo0K2cvFFSGOsQpZckhwgKf59R7LBXocL8nTPqHtm7C8ilK2AOW3WRvBHzYH8HBF/Jj9GHfgAR7rTaiM+4cJ5F9wVnkQD55U6oTEe+zSrS3BGsF9qJz05wmCtRK5NueI7SLV1FsM5lRYQMtr5bIWhrxE54t946VNOeJrO/ekTT8todMYjA+XAdNQLMZ5EN4vo9vY2afkNvVZM0rIC7rV3WfElbT6ZR/43XQa6QnctM5p4L0xLKWwrjrhTFcyntLI1WkMCFxTNBkXxxN9dgNgVzkvvpz/nuQXX6jX0dCcMdq2pS37rppUltftG4weVtb8pmTY2mqKP3/BxHODc6PLhcm8c+TtcIdj+lZ4Yta7X6374ric9tOpA5Z5uJbwXoJ702uhacQSdqX1qbWF61z1eraUFsH0Xb6QOgnX1fWLTSbK4iRezZLYaR/N2at7QObTimEpRbsMgbprARurQ/rAcYHBUf1B9WB3b1sWol/TXwhvd9XesBe6FsQ6h1rLyWre6Np5KVqGB3lrtUm0UhHDroAJFpTu9YBk3nOcA6107QO6pf5vay1vs8pIMUkK440fRAHrRh+vkbKEPj2CL59pJofrFPPKEjUq1Us2+2QHq8za1ySnr5+1qwf/fNLLIF3QJOeSziEOeTMcJyyOWMJYky5zOZ3MSVlEodErlSyO1bRDOTXWtVLh2l8/MaG1oFZafG3pYi89S95ouVK43zACo56bCVTkYvARfVL7iAlu0AeeEChMnXxmRmu2BZ9dCWbC6OjpDs65KRirxoZ2PZCQN35WMnMn5H1BLAwQUAAAICAAAOCHsQe28fm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kkWaRaJlalpqmplBSmqasZGucXKaQbJxcrKxsWVaormZuVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAOCHsFVaad2wCAAAWBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAOCHsQe28fm0AAAB4AAAACQAkAAAAAAAAAAAAAAC5AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHEDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -37800,7 +37821,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -37815,7 +37836,39 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
@@ -37918,6 +37971,8 @@ MonoBehaviour:
   - {fileID: 871391098}
   selectedPuppet: {fileID: 481399139}
   flareCount: 0
+  paperCount: 0
+  amountOfPaperToStartGenerator: 0
   lightTransform: {fileID: 654912257}
 --- !u!1 &1949291490
 GameObject:

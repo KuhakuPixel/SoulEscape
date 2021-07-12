@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector]public Puppet selectedPuppet;
     public int flareCount = 0;
    [HideInInspector] public int paperCount = 0;
-    public int amountOfPaperToStartGenerator = 0;
+   
     public Transform lightTransform;
     // Start is called before the first frame update
     private void Awake()
@@ -73,10 +73,7 @@ public class PlayerScript : MonoBehaviour
         lightTransform.position = selectedPuppet.transform.position;
 
     }
-    public bool CanPlayerStartGenerator()
-    {
-        return paperCount >= amountOfPaperToStartGenerator;
-    }
+   
     public void SelectNewDoll(int selectedPuppetIndex)
     {
         //change only if puppet is sealed

@@ -111,7 +111,7 @@ public class Puppet : MonoBehaviour
     public void SealPuppet()
     {
         this.isPuppetSealed = true;
-        if (playerScript.selectedPuppet == this)
+        if (playerScript.selectedPuppet.gameObject.name == this.gameObject.name)
         {
             playerScript.ForcePlayerToMoveToAnotherPuppet();
         }
