@@ -11,8 +11,6 @@ public class ExecText : MonoBehaviour,  IPointerClickHandler
     public UnityEvent onClick;
     // Start is called before the first frame update
     void Start(){
-        uitext = GetComponent<Text>();
-        startTitle = GetComponent<Text>();
         uitext.enabled = true;
         startTitle.enabled = true;
     }
