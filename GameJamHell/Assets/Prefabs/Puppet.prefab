@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8250688865359189976}
   - component: {fileID: 8250688865359189979}
   - component: {fileID: 8250688865359189978}
+  - component: {fileID: -8075758285450064325}
   m_Layer: 3
   m_Name: Puppet
   m_TagString: Player
@@ -98,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0334692, y: 0.006443858}
+  m_Offset: {x: -0.003417015, y: -0.020242691}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45391846, y: 0.7898176}
+  m_Size: {x: 0.18341732, y: 0.31868362}
   m_EdgeRadius: 0
 --- !u!50 &8250688865359189979
 Rigidbody2D:
@@ -124,7 +125,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 100
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -144,3 +145,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab8da87f78400d4386e269329ed6740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &-8075758285450064325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8250688865359189980}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b9e142936b1c14499f4f94f07ca3cb9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
