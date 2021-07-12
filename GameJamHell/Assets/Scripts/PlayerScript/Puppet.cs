@@ -89,11 +89,7 @@ public class Puppet : MonoBehaviour
         }
 
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0f5248e24d5e420b76262aeff3c17311c438920b
+
     
     public bool IsSelectedPuppetInThisRadius()
     {
@@ -109,7 +105,7 @@ public class Puppet : MonoBehaviour
             return false;
         }
 
->>>>>>> 0f5248e24d5e420b76262aeff3c17311c438920b
+
 
     public void CapturePuppet()
     {
