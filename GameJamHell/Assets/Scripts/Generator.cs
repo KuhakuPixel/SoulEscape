@@ -5,23 +5,37 @@ using UnityEngine.Events;
 public class Generator : MonoBehaviour
 {
     public Transform detectionPoint;
+    public int amountOfPaperToStartGenerator = 0;
     public  float detectionRadius = 0.2f;
     public LayerMask detectionLayer;
     public UnityEvent onGeneratorInteraction;
     public UnityEvent onGeneratorRelease;
     public UnityEvent onGeneratorDone;
     public KeyCode keyToWorkOnGenerator;
+    PlayerScript playerScript;
+    private void Start()
+    {
+        playerScript = GetComponent<PlayerScript>();
+    }
     void Update()
     {
         if(DetectObject())
         {
             if(InteractiveInput()){
-                //GetComponent<SpriteRenderer>().color = Color.yellow;
+             
                 onGeneratorInteraction.Invoke();
             }
             if (Input.GetKey(keyToWorkOnGenerator))
             {
-                onGeneratorInteraction.Invoke();
+                if (CanPlayerStartGenerator())
+                {
+                    onGeneratorInteraction.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Not enough paper");
+                }
+               
             }
             else
             {
@@ -42,5 +56,9 @@ public class Generator : MonoBehaviour
     public void OnGeneratorDone()
     {
         onGeneratorDone.Invoke();
+    }
+    public bool CanPlayerStartGenerator()
+    {
+        return playerScript.paperCount >= amountOfPaperToStartGenerator;
     }
 }

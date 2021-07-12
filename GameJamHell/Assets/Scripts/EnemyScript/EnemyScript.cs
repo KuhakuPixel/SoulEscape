@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour
     /// called when enemy captured the puppet
     /// </summary>
     public UnityEvent onPuppetCaptured;
-    public SpriteRenderer enemySprite;
+    private SpriteRenderer enemySprite;
     void OnDrawGizmosSelected()
     {
         // Display the explosion radius when selected
