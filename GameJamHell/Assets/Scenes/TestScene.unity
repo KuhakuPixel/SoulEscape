@@ -909,6 +909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab8da87f78400d4386e269329ed6740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puppetInteractionRadius: 0
+  puppetColor: 0
 --- !u!1 &559821372
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +986,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723880794d9db6b4793f510dc255e64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyToUnsealPuppet: 101
+  onSelectingSealedPuppet:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectingUnSealedPuppet:
+    m_PersistentCalls:
+      m_Calls: []
   playerSpeed: 50
   puppets:
   - {fileID: 1897275327}
@@ -992,6 +1001,7 @@ MonoBehaviour:
   - {fileID: 378426773}
   selectedPuppet: {fileID: 1897275327}
   flareCount: 0
+  lightTransform: {fileID: 0}
 --- !u!1 &729596984
 GameObject:
   m_ObjectHideFlags: 0
@@ -32132,6 +32142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab8da87f78400d4386e269329ed6740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puppetInteractionRadius: 0
+  puppetColor: 0
 --- !u!1 &1033716951
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,15 @@ public class Puppet : MonoBehaviour
     public bool IsPuppetSealed { get => isPuppetSealed; }
     public bool IsPuppetSelected { get => isPuppetSelected; }
 
+    public enum PuppetColors {
+        Red,
+        Green,
+        Purple,
+        Yellow
+    }
+
+    public PuppetColors puppetColor;
+
     void OnDrawGizmosSelected()
     {
         // Display the explosion radius when selected
