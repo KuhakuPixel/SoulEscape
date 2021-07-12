@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent onGameStart;
     PlayerScript playerScript;
     public Puppet selectedPuppet;
+    public int amountOfPaperToStartGenerator = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,14 @@ public class GameManager : MonoBehaviour
         foreach( AIDestinationSetter setter in enemyTargetSetters)
         {
             setter.target = selectedPuppet.transform;
+        }
+
+        //intialize all generator
+        Generator[] generators=FindObjectsOfType<Generator>();
+
+        foreach(Generator generator in generators)
+        {
+            generator.amountOfPaperToStartGenerator = this.amountOfPaperToStartGenerator;
         }
     }
     public void OnGameOver()
