@@ -31652,6 +31652,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4108610024800802615, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
+      propertyPath: puppetInteractionRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4634549592533733571, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -31696,9 +31700,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6841996420807533161, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
+      propertyPath: puppetInteractionRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6841996420807533162, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841996420807533165, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6847006777778591728, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
       propertyPath: m_Name
@@ -31720,6 +31732,10 @@ PrefabInstance:
       propertyPath: data.dataString
       value: UEsDBBQAAAgIAAA4IewqfnVCYQIAAAYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty2jAU/RVG65KxMTXQXQuEdJHHhHay8UZI11iDLHkkOUAy/HuvZBu7xBvL59zHuQ/5kwhlK2BOm40R/FFzID9GxJ/Jt1FPPsCJ7rXaig/obN4Ed4U3osHmlTqhEY+9m9UlOCPYT7WX3jhCsFYi16Zc8z0stXUW4ZxKC0gZ7by3QuhzRE74Gi+8yxlPk5k/feBpEY0ueGSgHJjetDOM7uJ0gU/amjfWtWKSlhVwL713ijuvebBSWFNrgGF8Ei2lsK0k4s5VKHlbFWDA18wFxQqDjO/4WYDYF86rHfo+57kF10o09LwSBhvVBCW/dNO9ktpDo+udytqnSadBUxPz8Qs9jgOdG10+dGnjyKdwhWCHV3pm1LpBd4fwqtcdh+4cqTzQnYS3AtST3hhdK46kM7V3rS1MVv3ntbJlAezQ443UG7Cuvs5ocpfMp/E8TdL1OJq1g/IFXUInTkspyl0YwrQBtlKH1od1AINj+o3qw7LYNi6iXtJfC3/ofrhVLXEvjHVItSUrr3Wna+NNyTo00JdWu6U2CgLcVlCBotKdXzCMux3nDTdIe8PcU39/2uQt112LG5cA9/ZRdEO96ON1crbQx0ewxXPtpFDQi/bEE/ZpqZVqtm3Yk85tW5ucsoHbvhb8/z0j83xOF5BDnkYc8mQyTlgesYSxJFnkdJbOSFhEobBOKl8aoW17cGqqD65w6brfymhjaBU2nxt63IiPUg9aLlSut8wAqOcmwlU4GEyCV5SvucAGbcE5ocK8yWdGpGYH4Nk1UBYqXZ+coVkfJSOVeNfOIxlZhv9IRi7k8g9QSwMEFAAACAgAADgh7EHtvH5tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJJFmkWiZWpaapqZQUpqmrGRrnFymkGycXKysbFlWqK5mblSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAADgh7Cp+dUJhAgAABgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAADgh7EHtvH5tAAAAeAAAAAkAJAAAAAAAAAAAAAAArgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABmAwAAAAA=
       objectReference: {fileID: 0}
+    - target: {fileID: 7942276879330850520, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
+      propertyPath: puppetInteractionRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7942276879330850523, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9
@@ -31727,6 +31743,10 @@ PrefabInstance:
     - target: {fileID: 7942276879330850523, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183364340029536165, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
+      propertyPath: puppetInteractionRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8183364340029536166, guid: 3878301f84aef3e4fb6f2d646270425a, type: 3}
       propertyPath: m_LocalScale.x
@@ -38032,6 +38052,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3265158638102603623, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3265158638102603624, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: target
       value: 
@@ -38039,6 +38063,10 @@ PrefabInstance:
     - target: {fileID: 3265158638102603627, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: m_Name
       value: EnemyScary
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265158638102603627, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}

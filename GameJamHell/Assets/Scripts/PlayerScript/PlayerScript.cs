@@ -1,9 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerScript : MonoBehaviour
 {
+    public KeyCode keyToUnsealPuppet = KeyCode.E;
+    /// <summary>
+    /// Invoked when select a sealed puppet
+    /// </summary>
+    public UnityEvent onSelectingSealedPuppet;
+
+    /// <summary>
+    /// Invoked when selecting an available  puppet
+    /// </summary>
+    public UnityEvent onSelectingUnSealedPuppet;
     public float playerSpeed = 0f;
     public List<Puppet> puppets = new List<Puppet>();
     public Puppet selectedPuppet;
@@ -19,7 +30,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         //init new doll
-        for(int i = 0; i < puppets.Count; i++)
+        for (int i = 0; i < puppets.Count; i++)
         {
             if (selectedPuppet == puppets[i])
             {
@@ -54,26 +65,29 @@ public class PlayerScript : MonoBehaviour
             inputVector.Normalize();
         }
         selectedPuppet.MovePuppet(inputVector, playerSpeed);
- 
+
 
     }
 
-    public void SelectNewDoll(int index)
+    public void SelectNewDoll(int selectedPuppetIndex)
     {
-        //disable other doll and enable new one
-        selectedPuppet = puppets[index];
-        for(int i = 0; i < puppets.Count; i++)
+        //change only if puppet is sealed
+        if (!puppets[selectedPuppetIndex].IsPuppetSealed)
         {
-            if (selectedPuppet != puppets[i])
+            onSelectingUnSealedPuppet.Invoke();
+            for (int i = 0; i < puppets.Count; i++)
             {
-                puppets[i].DisablePuppet();
+                puppets[i].UnSelectPuppet();
             }
-            else
-            {
-                puppets[i].EnablePuppet();
-            }
+            puppets[selectedPuppetIndex].SelectPuppet();
+            selectedPuppet = puppets[selectedPuppetIndex];
         }
+        else
+        {
+            onSelectingSealedPuppet.Invoke();
+        }
+
         GameObject.FindObjectOfType<CameraMovement>().SetNewTarget(selectedPuppet.transform);
-        
+
     }
 }

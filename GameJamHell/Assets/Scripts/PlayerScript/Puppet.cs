@@ -4,30 +4,64 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Puppet : MonoBehaviour
 {
-    private bool isPuppetSelected=false;
+    public float puppetInteractionRadius = 0f;
+
+    private bool isPuppetSelected = false;
+    public bool isPuppetSealed = false;
+
+
+
+    private PlayerScript playerScript;
     private Rigidbody2D playerRB;
     private Animator puppetAnimator;
     private SpriteRenderer puppetSprite;
+
+    public bool IsPuppetSealed { get => isPuppetSealed; }
+
+    void OnDrawGizmosSelected()
+    {
+        // Display the explosion radius when selected
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, puppetInteractionRadius);
+    }
     // Start is called before the first frame update
     void Start()
     {
         playerRB = this.GetComponent<Rigidbody2D>();
         puppetAnimator = this.GetComponent<Animator>();
         puppetSprite = this.GetComponent<SpriteRenderer>();
+        playerScript = GameObject.FindObjectOfType<PlayerScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //try to unseal another puppet
+        if (isPuppetSelected && Input.GetKeyDown(playerScript.keyToUnsealPuppet))
+        {
+
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, puppetInteractionRadius);
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.tag == "Player")
+                {
+                    Puppet puppet = collider.gameObject.GetComponent<Puppet>();
+                    if (puppet.IsPuppetSealed)
+                    {
+                        puppet.UnSealPuppet();
+                    }
+                }
+            }
+
+        }
     }
 
-    public void MovePuppet(Vector2 moveDirection,float speed)
+    public void MovePuppet(Vector2 moveDirection, float speed)
     {
         if (this.isPuppetSelected)
         {
             Vector3 moveDir = moveDirection;
-            if (moveDir.x!= 0||moveDir.y!=0)
+            if (moveDir.x != 0 || moveDir.y != 0)
             {
                 puppetAnimator.SetBool("isWalking", true);
             }
@@ -40,21 +74,57 @@ public class Puppet : MonoBehaviour
             {
                 puppetSprite.flipX = true;
             }
-            else if(moveDir.x<0)
+            else if (moveDir.x < 0)
             {
                 puppetSprite.flipX = false;
             }
 
             playerRB.velocity = moveDir * speed * Time.deltaTime;
         }
-        
+
     }
-    public void DisablePuppet()
+    public bool IsSelectedPuppetInThisRadius()
+    {
+        Vector3 selectedPuppetPosition = playerScript.selectedPuppet.transform.position;
+
+        float distanceBetweenSelectedPuppet = Vector3.Distance(transform.position, selectedPuppetPosition);
+        if (distanceBetweenSelectedPuppet <= puppetInteractionRadius)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+
+    }
+    /// <summary>
+    /// Player can unseal another puppet
+    /// </summary>
+    public void UnsealAnotherPuppet(Puppet puppet)
+    {
+        puppet.UnSealPuppet();
+    }
+    public void SealPuppet()
+    {
+        this.isPuppetSealed = true;
+    }
+    public void UnSealPuppet()
+    {
+        this.isPuppetSealed = false;
+    }
+    public void UnSelectPuppet()
     {
         this.isPuppetSelected = false;
     }
-    public void EnablePuppet()
+    public void SelectPuppet()
     {
+
+        Debug.Log("Puppet  is Sealed");
+
         this.isPuppetSelected = true;
+
+
     }
 }
