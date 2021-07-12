@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     public UnityEvent onSelectingUnSealedPuppet;
     public float playerSpeed = 0f;
     public List<Puppet> puppets = new List<Puppet>();
-    public Puppet selectedPuppet;
+    [HideInInspector]public Puppet selectedPuppet;
     public int flareCount = 0;
 
     public Transform lightTransform;
