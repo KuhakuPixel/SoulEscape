@@ -11,20 +11,18 @@ public class Flareuitext : MonoBehaviour
     void Start()
     {
         //playerScript = GameObject.FindObjectOfType<PlayerScript>();
-        uitext.GetComponent<Text>().text = flareCount + "/4";
+        uitext.GetComponent<Text>().text = "Flare : " + flareCount + "/3";
 
     }
     void Update()
     {
         if(InteractiveInput()){
             flareCount++;
-            uitext.GetComponent<Text>().text = flareCount + "/4";
+            uitext.GetComponent<Text>().text = "Flare : " + flareCount + "/3";
         }
     }
     bool InteractiveInput()
     {
         return Input.GetKeyDown(KeyCode.G);
     }
-
-
 }
