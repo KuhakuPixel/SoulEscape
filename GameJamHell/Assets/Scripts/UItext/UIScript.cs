@@ -18,9 +18,9 @@ public class UIScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainMenu.SetActive(true);
-        gameOver.SetActive(false);
-        hud.SetActive(false);
+   //     mainMenu.SetActive(true);
+     //   gameOver.SetActive(false);
+       // hud.SetActive(false);
     }
 
     // Update is called once per frame

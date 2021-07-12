@@ -110,7 +110,7 @@ public class PlayerScript : MonoBehaviour
              
             }
             puppets[selectedPuppetIndex].SelectPuppet();
-            uiScript.DisableIcon(PuppetIndexToEnum(selectedPuppetIndex));
+            uiScript.EnableIcon(PuppetIndexToEnum(selectedPuppetIndex));
             selectedPuppet = puppets[selectedPuppetIndex];
         }
         else
