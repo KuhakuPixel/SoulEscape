@@ -11,6 +11,10 @@ public class UIScript : MonoBehaviour
     public GameObject gameOver;
     public GameObject hud;
 
+    public GameObject iconRed;
+    public GameObject iconYellow;
+    public GameObject iconPurple;
+    public GameObject iconGreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,39 +26,7 @@ public class UIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // for color changing test
-        // comment out in production
-        if(Input.GetKeyDown(KeyCode.Q)) {
-            DisableIcon(Puppet.PuppetColors.Red);
-        }
-
-        if(Input.GetKeyDown(KeyCode.W)) {
-            DisableIcon(Puppet.PuppetColors.Green);
-        }
-
-        if(Input.GetKeyDown(KeyCode.E)) {
-            DisableIcon(Puppet.PuppetColors.Purple);
-        }
-
-        if(Input.GetKeyDown(KeyCode.R)) {
-            DisableIcon(Puppet.PuppetColors.Yellow);
-        }
-
-        if(Input.GetKeyDown(KeyCode.Z)) {
-            EnableIcon(Puppet.PuppetColors.Red);
-        }
-
-        if(Input.GetKeyDown(KeyCode.X)) {
-            EnableIcon(Puppet.PuppetColors.Green);
-        }
-
-        if(Input.GetKeyDown(KeyCode.C)) {
-            EnableIcon(Puppet.PuppetColors.Purple);
-        }
-
-        if(Input.GetKeyDown(KeyCode.V)) {
-            EnableIcon(Puppet.PuppetColors.Yellow);
-        }
+        
     }
 
     public void StartClick() {
@@ -74,20 +46,21 @@ public class UIScript : MonoBehaviour
 
     public void DisableIcon(Puppet.PuppetColors puppetColor) {
         switch(puppetColor) {
-            case Puppet.PuppetColors.Red: 
-                GameObject.Find("HUD/IconRed").GetComponent<Image>().color = new Color32(130, 130, 130, 255);
+            case Puppet.PuppetColors.Red:
+             
+                iconRed.GetComponent<Image>().color = new Color32(130, 130, 130, 255);
                 break;
             
             case Puppet.PuppetColors.Green: 
-                GameObject.Find("HUD/IconGreen").GetComponent<Image>().color = new Color32(130, 130, 130, 255);
+                iconGreen.GetComponent<Image>().color = new Color32(130, 130, 130, 255);
                 break;
 
             case Puppet.PuppetColors.Purple: 
-                GameObject.Find("HUD/IconPurple").GetComponent<Image>().color = new Color32(130, 130, 130, 255);
+                iconPurple.GetComponent<Image>().color = new Color32(130, 130, 130, 255);
                 break;
 
             case Puppet.PuppetColors.Yellow: 
-                GameObject.Find("HUD/IconYellow").GetComponent<Image>().color = new Color32(130, 130, 130, 255);
+                iconYellow.GetComponent<Image>().color = new Color32(130, 130, 130, 255);
                 break;
         }     
     }

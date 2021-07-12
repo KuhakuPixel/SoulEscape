@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class PlayerScript : MonoBehaviour
 {
+   
+    public UIScript uiScript;
     public KeyCode keyToUnsealPuppet = KeyCode.E;
     /// <summary>
     /// Invoked when select a sealed puppet
@@ -49,6 +51,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SelectNewDoll(0);
+           
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -73,7 +76,27 @@ public class PlayerScript : MonoBehaviour
         lightTransform.position = selectedPuppet.transform.position;
 
     }
-   
+    Puppet.PuppetColors PuppetIndexToEnum(int index)
+    {
+        Puppet.PuppetColors color=Puppet.PuppetColors.Green;
+        if (index == 0)
+        {
+            color = Puppet.PuppetColors.Red;
+        }
+        else if (index == 1)
+        {
+            color = Puppet.PuppetColors.Yellow;
+        }
+        else if (index == 2)
+        {
+            color = Puppet.PuppetColors.Green;
+        }
+        else if (index == 3)
+        {
+            color = Puppet.PuppetColors.Purple;
+        }
+        return color;
+    }
     public void SelectNewDoll(int selectedPuppetIndex)
     {
         //change only if puppet is sealed
@@ -83,8 +106,11 @@ public class PlayerScript : MonoBehaviour
             for (int i = 0; i < puppets.Count; i++)
             {
                 puppets[i].UnSelectPuppet();
+                uiScript.DisableIcon(PuppetIndexToEnum(i));
+             
             }
             puppets[selectedPuppetIndex].SelectPuppet();
+            uiScript.DisableIcon(PuppetIndexToEnum(selectedPuppetIndex));
             selectedPuppet = puppets[selectedPuppetIndex];
         }
         else
