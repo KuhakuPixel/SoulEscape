@@ -47,7 +47,7 @@ public class PlayerScript : MonoBehaviour
         {
             SelectNewDoll(3);
         }
-        Vector2 inputVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         if (inputVector.magnitude > 1)
         {
