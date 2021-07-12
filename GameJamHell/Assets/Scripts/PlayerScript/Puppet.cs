@@ -7,7 +7,7 @@ public class Puppet : MonoBehaviour
     public float puppetInteractionRadius = 0f;
 
     private bool isPuppetSelected = false;
-    public bool isPuppetSealed = false;
+    private bool isPuppetSealed = false;
     private Vector2 moveDir;
 
 
@@ -91,31 +91,15 @@ public class Puppet : MonoBehaviour
     }
 
 
-    public bool IsSelectedPuppetInThisRadius()
-    {
-        Vector3 selectedPuppetPosition = playerScript.selectedPuppet.transform.position;
-
-        float distanceBetweenSelectedPuppet = Vector3.Distance(transform.position, selectedPuppetPosition);
-        if (distanceBetweenSelectedPuppet <= puppetInteractionRadius)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-
-
-
-       
-    }
+    
 
     public void CapturePuppet()
     {
         this.SealPuppet();
-        playerScript.ForcePlayerToMoveToAnotherPuppet();
+        
         Color oldPuppetColor = this.GetComponent<SpriteRenderer>().color;
-        this.GetComponent<SpriteRenderer>().color = new Color(oldPuppetColor.r, oldPuppetColor.g, oldPuppetColor.b, 50f);
+        this.GetComponent<SpriteRenderer>().color = new Color(oldPuppetColor.r, oldPuppetColor.g, oldPuppetColor.b, oldPuppetColor.a/3);
+        Debug.Log("Puppet captured");
     }
     /// <summary>
     /// Player can unseal another puppet
@@ -127,6 +111,10 @@ public class Puppet : MonoBehaviour
     public void SealPuppet()
     {
         this.isPuppetSealed = true;
+        if (playerScript.selectedPuppet == this)
+        {
+            playerScript.ForcePlayerToMoveToAnotherPuppet();
+        }
     }
     public void UnSealPuppet()
     {

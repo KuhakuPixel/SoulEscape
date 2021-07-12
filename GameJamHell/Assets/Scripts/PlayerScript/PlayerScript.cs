@@ -105,6 +105,8 @@ public class PlayerScript : MonoBehaviour
                 return;
             }
         }
+
+        Debug.Log("no unsealed puppet remaining ");
         //if no puppet left then game over
     }
 

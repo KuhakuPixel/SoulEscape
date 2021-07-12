@@ -8,8 +8,7 @@ public class EnemyScript : MonoBehaviour
     public float captureRadius=0f;
     AIDestinationSetter enemyDestinationSetter;
     PlayerScript playerScript;
-    private Puppet lastChasedPuppet;
-    private Puppet currentlyChasingPuppet;
+    
     /// <summary>
     /// called when enemy captured the puppet
     /// </summary>
@@ -40,10 +39,14 @@ public class EnemyScript : MonoBehaviour
             if (collider.tag == "Player")
             {
                 Puppet puppet=collider.gameObject.GetComponent<Puppet>();
-                puppet.CapturePuppet();
-                onPuppetCaptured.Invoke();
-                //after sealed ,chase the player next
-                enemyDestinationSetter.target = playerScript.selectedPuppet.transform;
+                if (!puppet.IsPuppetSealed)
+                {
+                    puppet.CapturePuppet();
+                    onPuppetCaptured.Invoke();
+                    //after sealed ,chase the player next
+                    enemyDestinationSetter.target = playerScript.selectedPuppet.transform;
+                }
+           
 
 
                
