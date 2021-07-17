@@ -18,9 +18,9 @@ public class UIScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-   //     mainMenu.SetActive(true);
-     //   gameOver.SetActive(false);
-       // hud.SetActive(false);
+       mainMenu.SetActive(true);
+       gameOver.SetActive(false);
+       hud.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,6 +42,11 @@ public class UIScript : MonoBehaviour
     public void QuitClick() {
         mainMenu.SetActive(true);
         gameOver.SetActive(false);
+    }
+
+    public void ShowGameOver() {
+        hud.SetActive(false);
+        gameOver.SetActive(true);
     }
 
     public void DisableIcon(Puppet.PuppetColors puppetColor) {
