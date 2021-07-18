@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class UIScript : MonoBehaviour
        mainMenu.SetActive(true);
        gameOver.SetActive(false);
        hud.SetActive(false);
+
+       Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -30,21 +33,25 @@ public class UIScript : MonoBehaviour
     }
 
     public void StartClick() {
+        Time.timeScale = 1;
         mainMenu.SetActive(false);
         hud.SetActive(true);
     }
 
     public void RetryClick() {
+        // TODO : reload scene skipping main menu screen
         gameOver.SetActive(false);
         hud.SetActive(true);
     }
 
     public void QuitClick() {
-        mainMenu.SetActive(true);
-        gameOver.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // mainMenu.SetActive(true);
+        // gameOver.SetActive(false);
     }
 
     public void ShowGameOver() {
+        Time.timeScale = 0;
         hud.SetActive(false);
         gameOver.SetActive(true);
     }
