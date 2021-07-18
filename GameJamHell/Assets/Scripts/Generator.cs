@@ -13,18 +13,24 @@ public class Generator : MonoBehaviour
     public UnityEvent onGeneratorDone;
     public KeyCode keyToWorkOnGenerator;
     PlayerScript playerScript;
+
+    private bool onGeneratorDoneHasBeenCalled = false;
+    void OnDrawGizmosSelected()
+    {
+        
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(detectionPoint.position, detectionRadius);
+    }
     private void Start()
     {
-        playerScript = GetComponent<PlayerScript>();
+        playerScript =FindObjectOfType<PlayerScript>();
     }
     void Update()
     {
         if(DetectObject())
         {
-            if(InteractiveInput()){
-             
-                onGeneratorInteraction.Invoke();
-            }
+            Debug.Log("Player is nearby generator");
+            
             if (Input.GetKey(keyToWorkOnGenerator))
             {
                 if (CanPlayerStartGenerator())
@@ -46,7 +52,7 @@ public class Generator : MonoBehaviour
 
     bool InteractiveInput()
     {
-        return Input.GetKeyDown(KeyCode.G);
+        return Input.GetKeyDown(keyToWorkOnGenerator);
     }
 
     bool DetectObject()
@@ -55,7 +61,11 @@ public class Generator : MonoBehaviour
     }
     public void OnGeneratorDone()
     {
-        onGeneratorDone.Invoke();
+        if (!onGeneratorDoneHasBeenCalled)
+            onGeneratorDone.Invoke();
+        else
+            onGeneratorDoneHasBeenCalled = true;
+
     }
     public bool CanPlayerStartGenerator()
     {

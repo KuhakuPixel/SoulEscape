@@ -27,6 +27,10 @@ public class SpawnerManager : MonoBehaviour
        
     }
 
+    public void SpawnPaperRandomly()
+    {
+
+    }
     public void SpawnFlareRandomly()
     {
 

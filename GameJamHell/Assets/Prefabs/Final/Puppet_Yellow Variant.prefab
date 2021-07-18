@@ -31,6 +31,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab8da87f78400d4386e269329ed6740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puppetInteractionRadius: 0
+  puppetColor: 0
 --- !u!1001 &2744093282393319390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,17 +40,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1897275327, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
+      propertyPath: puppetInteractionRadius
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4103190538807539314, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2476096784960187872, guid: 7e7cbd1796220537db6a5cb33c380fa1, type: 3}
+    - target: {fileID: 4103190538807539314, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 5377345780617043663, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5377345780617043663, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.61
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5377345780617043663, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -89,6 +99,14 @@ PrefabInstance:
     - target: {fileID: 8368135561002208350, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
       propertyPath: m_Name
       value: Puppet_Yellow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368135561002208350, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8368135561002208350, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7236681198447790289, guid: 1054e68853f90b66d902ff3d14227fd1, type: 3}

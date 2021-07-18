@@ -21,8 +21,10 @@ public class PlayerScript : MonoBehaviour
     public List<Puppet> puppets = new List<Puppet>();
     [HideInInspector]public Puppet selectedPuppet;
     public int flareCount = 0;
-   [HideInInspector] public int paperCount = 0;
-   
+    public UnityEvent onPlayerPickedUpFlare;
+    [HideInInspector] public int paperCount = 0;
+    public UnityEvent onPlayerPickedUpPaper;
+
     public Transform lightTransform;
     // Start is called before the first frame update
     private void Awake()
@@ -106,7 +108,11 @@ public class PlayerScript : MonoBehaviour
             for (int i = 0; i < puppets.Count; i++)
             {
                 puppets[i].UnSelectPuppet();
+
+              
                 uiScript.DisableIcon(PuppetIndexToEnum(i));
+               
+          
              
             }
             puppets[selectedPuppetIndex].SelectPuppet();
@@ -151,5 +157,16 @@ public class PlayerScript : MonoBehaviour
             }
         }
         return count;
+    }
+
+    public void PickUpFlare()
+    {
+        onPlayerPickedUpFlare.Invoke();
+        flareCount++;
+    }
+    public void PickUpPaper()
+    {
+        onPlayerPickedUpPaper.Invoke();
+        paperCount++;
     }
 }
