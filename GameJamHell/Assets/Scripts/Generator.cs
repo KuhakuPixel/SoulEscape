@@ -11,7 +11,7 @@ public class Generator : MonoBehaviour
     public UnityEvent onGeneratorInteraction;
     public UnityEvent onGeneratorRelease;
     public UnityEvent onGeneratorDone;
-    public KeyCode keyToWorkOnGenerator;
+    public KeyCode keyToWorkOnGenerator = KeyCode.G;
     PlayerScript playerScript;
 
     private bool onGeneratorDoneHasBeenCalled = false;
