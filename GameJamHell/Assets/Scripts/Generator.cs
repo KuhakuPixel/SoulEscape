@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class Generator : MonoBehaviour
 {
     public Transform detectionPoint;
-    public int amountOfPaperToStartGenerator = 0;
+    [HideInInspector]public int amountOfPaperToStartGenerator = 0;
     public  float detectionRadius = 0.2f;
     public LayerMask detectionLayer;
     public UnityEvent onGeneratorInteraction;

@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionPoint: {fileID: 5533137232991878826}
-  amountOfPaperToStartGenerator: 0
+  amountOfPaperToStartGenerator: 2
   detectionRadius: 0.35
   detectionLayer:
     serializedVersion: 2

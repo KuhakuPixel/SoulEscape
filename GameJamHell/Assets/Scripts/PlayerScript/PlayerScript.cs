@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector]public Puppet selectedPuppet;
     public int flareCount = 0;
     public UnityEvent onPlayerPickedUpFlare;
-    [HideInInspector] public int paperCount = 0;
+     public int paperCount = 0;
     public UnityEvent onPlayerPickedUpPaper;
 
     public Transform lightTransform;
