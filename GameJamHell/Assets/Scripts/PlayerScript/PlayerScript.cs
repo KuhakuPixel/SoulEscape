@@ -133,7 +133,8 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        uiScript.ShowGameOver();
+        //moved to event onGameOver
+        //uiScript.ShowGameOver();
 
         Debug.Log("no unsealed puppet remaining ");
         //if no puppet left then game over

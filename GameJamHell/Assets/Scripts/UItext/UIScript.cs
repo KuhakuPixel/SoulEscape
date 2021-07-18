@@ -42,6 +42,7 @@ public class UIScript : MonoBehaviour
         // TODO : reload scene skipping main menu screen
         gameOver.SetActive(false);
         hud.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitClick() {
