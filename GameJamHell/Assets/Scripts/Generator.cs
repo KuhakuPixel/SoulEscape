@@ -67,6 +67,7 @@ public class Generator : MonoBehaviour
             onGeneratorDoneHasBeenCalled = true;
 
     }
+    
     public bool CanPlayerStartGenerator()
     {
         return playerScript.paperCount >= amountOfPaperToStartGenerator;

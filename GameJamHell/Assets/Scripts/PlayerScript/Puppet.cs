@@ -52,32 +52,33 @@ public class Puppet : MonoBehaviour
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, puppetInteractionRadius);
 
-            // if(Input.GetKeyDown(playerScript.keyToUnsealPuppet)) {
-                foreach (Collider2D collider in colliders)
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.tag == "Player")
                 {
-                    if (collider.tag == "Player")
-                    {
-                        if(Input.GetKeyDown(playerScript.keyToUnsealPuppet)) {
-                            Puppet puppet = collider.gameObject.GetComponent<Puppet>();
-                            if (puppet.IsPuppetSealed)
-                            {
-                                puppet.UnSealPuppet();
-                                Debug.Log("unseal puppet");
-                            }
-
+                    if(Input.GetKeyDown(playerScript.keyToUnsealPuppet)) {
+                        Puppet puppet = collider.gameObject.GetComponent<Puppet>();
+                        if (puppet.IsPuppetSealed)
+                        {
+                            puppet.UnSealPuppet();
+                            Debug.Log("unseal puppet");
                         }
-                    }
-                    else if(collider.tag == "Flare") {
-                        // respawn flare
-                        collider.gameObject.SetActive(false);
-                        playerScript.PickUpFlare();
-                    }
-                    else if (collider.tag == "Paper") {
-                        collider.gameObject.SetActive(false);
-                        playerScript.PickUpPaper();
+
                     }
                 }
-            // }
+                else if(collider.tag == "Flare") {
+                    // respawn flare
+                    collider.gameObject.SetActive(false);
+                    playerScript.PickUpFlare();
+                }
+                else if (collider.tag == "Paper") {
+                    collider.gameObject.SetActive(false);
+                    playerScript.PickUpPaper();
+                }
+                else if(collider.tag == "Door") {
+                    Debug.Log("Win");
+                }
+            }
         }
 
         if (!isPuppetSelected) {
