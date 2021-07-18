@@ -8,9 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour
 {
+    public PlayerScript playerScript;
     public GameObject mainMenu;
     public GameObject gameOver;
     public GameObject hud;
+
+    public Text flareText;
+    public Text paperText;
 
     public GameObject iconRed;
     public GameObject iconYellow;
@@ -81,21 +85,29 @@ public class UIScript : MonoBehaviour
     public void EnableIcon(Puppet.PuppetColors puppetColor) {
         switch(puppetColor) {
             case Puppet.PuppetColors.Red: 
-                GameObject.Find("HUD/IconRed").GetComponent<Image>().color = new Color32(207, 207, 207, 255);
+                iconRed.GetComponent<Image>().color = new Color32(207, 207, 207, 255);
                 break;
             
             case Puppet.PuppetColors.Green: 
-                GameObject.Find("HUD/IconGreen").GetComponent<Image>().color = new Color32(207, 207, 207, 255);
+                iconGreen.GetComponent<Image>().color = new Color32(207, 207, 207, 255);
                 break;
 
             case Puppet.PuppetColors.Purple: 
-                GameObject.Find("HUD/IconPurple").GetComponent<Image>().color = new Color32(207, 207, 207, 255);
+                iconPurple.GetComponent<Image>().color = new Color32(207, 207, 207, 255);
                 break;
 
             case Puppet.PuppetColors.Yellow: 
-                GameObject.Find("HUD/IconYellow").GetComponent<Image>().color = new Color32(207, 207, 207, 255);
+                iconYellow.GetComponent<Image>().color = new Color32(207, 207, 207, 255);
                 break;
         }     
+    }
+
+    public void UpdateFlareCount() {
+        flareText.text = playerScript.flareCount.ToString();
+    }
+
+    public void UpdatePaperCount() {
+        paperText.text = playerScript.paperCount.ToString();
     }
 
 }

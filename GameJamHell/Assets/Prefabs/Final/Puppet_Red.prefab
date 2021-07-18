@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab8da87f78400d4386e269329ed6740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puppetInteractionRadius: 0.3
+  puppetInteractionRadius: 0.15
   puppetColor: 0
 --- !u!58 &6568670896459785814
 CircleCollider2D:

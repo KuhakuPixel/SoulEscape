@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Puppet : MonoBehaviour
 {
-    public float puppetInteractionRadius = 0f;
+    public float puppetInteractionRadius = 5f;
 
     private bool isPuppetSelected = false;
     private bool isPuppetSealed = false;
@@ -48,21 +48,36 @@ public class Puppet : MonoBehaviour
     void Update()
     {
         //try to unseal another puppet
-        if (isPuppetSelected && Input.GetKeyDown(playerScript.keyToUnsealPuppet))
+        if (isPuppetSelected)
         {
-
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, puppetInteractionRadius);
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.tag == "Player")
+
+            // if(Input.GetKeyDown(playerScript.keyToUnsealPuppet)) {
+                foreach (Collider2D collider in colliders)
                 {
-                    Puppet puppet = collider.gameObject.GetComponent<Puppet>();
-                    if (puppet.IsPuppetSealed)
+                    if (collider.tag == "Player")
                     {
-                        puppet.UnSealPuppet();
+                        if(Input.GetKeyDown(playerScript.keyToUnsealPuppet)) {
+                            Puppet puppet = collider.gameObject.GetComponent<Puppet>();
+                            if (puppet.IsPuppetSealed)
+                            {
+                                puppet.UnSealPuppet();
+                                Debug.Log("unseal puppet");
+                            }
+
+                        }
+                    }
+                    else if(collider.tag == "Flare") {
+                        // respawn flare
+                        collider.gameObject.SetActive(false);
+                        playerScript.PickUpFlare();
+                    }
+                    else if (collider.tag == "Paper") {
+                        collider.gameObject.SetActive(false);
+                        playerScript.PickUpPaper();
                     }
                 }
-            }
+            // }
         }
 
         if (!isPuppetSelected) {
@@ -105,9 +120,6 @@ public class Puppet : MonoBehaviour
     public void CapturePuppet()
     {
         this.SealPuppet();
-        
-        Color oldPuppetColor = this.GetComponent<SpriteRenderer>().color;
-        this.GetComponent<SpriteRenderer>().color = new Color(oldPuppetColor.r, oldPuppetColor.g, oldPuppetColor.b, oldPuppetColor.a/3);
         Debug.Log("Puppet captured");
     }
     /// <summary>
@@ -120,6 +132,9 @@ public class Puppet : MonoBehaviour
     public void SealPuppet()
     {
         this.isPuppetSealed = true;
+        Color oldPuppetColor = this.GetComponent<SpriteRenderer>().color;
+        this.GetComponent<SpriteRenderer>().color = new Color(oldPuppetColor.r, oldPuppetColor.g, oldPuppetColor.b, 0.3f);
+
         if (playerScript.selectedPuppet.gameObject.name == this.gameObject.name)
         {
             playerScript.ForcePlayerToMoveToAnotherPuppet();
@@ -128,6 +143,8 @@ public class Puppet : MonoBehaviour
     public void UnSealPuppet()
     {
         this.isPuppetSealed = false;
+        Color color = GetComponent<SpriteRenderer>().color;
+        GetComponent<SpriteRenderer>().color = new Color(color.r, color.g, color.b, 1f);
     }
     public void UnSelectPuppet()
     {

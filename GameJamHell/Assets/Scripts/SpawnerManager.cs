@@ -7,6 +7,7 @@ public class SpawnerManager : MonoBehaviour
     public Transform[] spawnFlareCoordinates = new Transform[2];
 
     public GameObject flare;
+    public GameObject paper;
     private List<GameObject> generatedFlares = new List<GameObject>();
     public float minDistanceBetweenFlare;
     public float maxAmountOfFlare = 0f;

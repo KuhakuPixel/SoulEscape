@@ -161,12 +161,12 @@ public class PlayerScript : MonoBehaviour
 
     public void PickUpFlare()
     {
-        onPlayerPickedUpFlare.Invoke();
         flareCount++;
+        onPlayerPickedUpFlare.Invoke();
     }
     public void PickUpPaper()
     {
-        onPlayerPickedUpPaper.Invoke();
         paperCount++;
+        onPlayerPickedUpPaper.Invoke();
     }
 }
