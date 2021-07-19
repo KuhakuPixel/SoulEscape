@@ -37779,12 +37779,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf6efd27f2f786439408c877785fc8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnFlareCoordinates:
+  spawnItemCoordinatesRange:
   - {fileID: 1708687977}
   - {fileID: 695169185}
-  flare: {fileID: 1867109448245842322, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
-  minDistanceBetweenFlare: 10
-  maxAmountOfFlare: 10
+  flareSpawnProperty:
+    maxSpawnCount: 4
+    minDistanceBetweenItem: 2
+    itemPrefab: {fileID: 1867109448245842322, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
+    spawnedItems: []
+  paperSpawnProperty:
+    maxSpawnCount: 2
+    minDistanceBetweenItem: 4
+    itemPrefab: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
+    spawnedItems: []
 --- !u!114 &1802679669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37817,6 +37824,7 @@ MonoBehaviour:
       m_Calls: []
   selectedPuppet: {fileID: 481399139}
   amountOfPaperToStartGenerator: 0
+  door: {fileID: 0}
 --- !u!1 &1851160670
 GameObject:
   m_ObjectHideFlags: 0

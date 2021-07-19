@@ -66,6 +66,8 @@ public class Puppet : MonoBehaviour
 
                     }
                 }
+                //moved to PickableItemScript.cs 
+                /*
                 else if(collider.tag == "Flare") {
                     // respawn flare
                     collider.gameObject.SetActive(false);
@@ -78,6 +80,7 @@ public class Puppet : MonoBehaviour
                 else if(collider.tag == "Door") {
                     Debug.Log("Win");
                 }
+                */
             }
         }
 

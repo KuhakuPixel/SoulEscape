@@ -1,76 +1,82 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
 {
-    public Transform[] spawnFlareCoordinates = new Transform[2];
+  
+    
+    public Transform[] spawnItemCoordinatesRange = new Transform[2];
 
-    public GameObject flare;
-    public GameObject paper;
-    private List<GameObject> generatedFlares = new List<GameObject>();
-    public float minDistanceBetweenFlare;
-    public float maxAmountOfFlare = 0f;
+  
+    public PickableItemSpawnProperty flareSpawnProperty;
+    public PickableItemSpawnProperty paperSpawnProperty;
     public static  SpawnerManager instance;
     // Start is called before the first frame update
     void Awake()
     {
-        if (spawnFlareCoordinates.Length != 2)
+        if (spawnItemCoordinatesRange.Length != 2)
         {
             throw new System.ArgumentException("spawnFlareCoordinates's length must be exactly 2");
         }
         instance = this;
     }
 
+    private void Start()
+    {
+        //spawn paper
+        for(int i = 0; i < paperSpawnProperty.maxSpawnCount; i++)
+        {
+           SpawnItemRandomly(paperSpawnProperty);
+        }
+        
+    }
     // Update is called once per frame
     void Update()
     {
+        //making sure there will be x number of flare always
+
+        while (flareSpawnProperty.spawnedItems.Count<flareSpawnProperty.maxSpawnCount)
+        {
+            SpawnItemRandomly(flareSpawnProperty);
+        }
        
     }
 
-    public void SpawnPaperRandomly()
-    {
-
-    }
-    public void SpawnFlareRandomly()
+    public void SpawnItemRandomly(PickableItemSpawnProperty itemToSpawnProperty)
     {
 
        
-        Vector2 spawnPosition = GetFlareSpawnCoordinate();
+        Vector2 spawnPosition = GetRandomItemSpawnCoordinate(itemToSpawnProperty);
 
     
-        GameObject newFlare = GameObject.Instantiate(flare, new Vector3(spawnPosition.x, spawnPosition.y, 0f), flare.transform.rotation);
-        generatedFlares.Add(newFlare);
-        if (generatedFlares.Count >= maxAmountOfFlare + 1)
-        {
-            //destroy
-            Destroy(generatedFlares[0]);
-            generatedFlares.RemoveAt(0);
-
-        }
+        GameObject newItem = GameObject.Instantiate(itemToSpawnProperty.itemPrefab, new Vector3(spawnPosition.x, spawnPosition.y, 0f), itemToSpawnProperty.itemPrefab.transform.rotation);
+        newItem.GetComponent<PickableItemScript>().InitializeItemProperty(itemToSpawnProperty);
+        itemToSpawnProperty.spawnedItems.Add(newItem);
+        Debug.Log("Sucsessfully spawned: " + itemToSpawnProperty.itemPrefab.name +" at: "+spawnPosition);
+       
 
 
 
     }
 
-    Vector2 GetFlareSpawnCoordinate()
+    Vector2 GetRandomItemSpawnCoordinate(PickableItemSpawnProperty itemToSpawnProperty)
     {
-        float xStart = spawnFlareCoordinates[0].position.x;
-        float xEnd = spawnFlareCoordinates[1].position.x;
-        float yStart = spawnFlareCoordinates[0].position.y;
-        float yEnd = spawnFlareCoordinates[1].position.y;
+        float xStart = spawnItemCoordinatesRange[0].position.x;
+        float xEnd = spawnItemCoordinatesRange[1].position.x;
+        float yStart = spawnItemCoordinatesRange[0].position.y;
+        float yEnd = spawnItemCoordinatesRange[1].position.y;
 
         float xSpawnPosition = Random.Range(xStart, xEnd);
         float ySpawnPosition = Random.Range(yStart, yEnd);
         Vector2 SpawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
 
-        bool spawnPositionIsValid = IsFlareSpawnPositionValid(SpawnPosition);
+        bool spawnPositionIsValid = IsSpawnPositionValid(itemToSpawnProperty,SpawnPosition);
         while (!spawnPositionIsValid)
         {
             xSpawnPosition = Random.Range(xStart, xEnd);
             ySpawnPosition = Random.Range(yStart, yEnd);
             SpawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
-            spawnPositionIsValid = IsFlareSpawnPositionValid(SpawnPosition);
+            spawnPositionIsValid = IsSpawnPositionValid(itemToSpawnProperty,SpawnPosition);
 
         }
         return SpawnPosition;
@@ -80,13 +86,13 @@ public class SpawnerManager : MonoBehaviour
     /// Check for nearby flares
     /// </summary>
     /// <returns></returns>
-    bool IsFlareSpawnPositionValid(Vector2 spawnPosition)
+    bool IsSpawnPositionValid(PickableItemSpawnProperty itemToSpawnProperty, Vector2 spawnPosition)
     {
-        for (int i = 0; i < generatedFlares.Count; i++)
+        for (int i = 0; i < itemToSpawnProperty.spawnedItems.Count; i++)
         {
-            float distanceBetweenFlares = Vector2.Distance(generatedFlares[i].transform.position, spawnPosition);
+            float distanceBetweenItem = Vector2.Distance(itemToSpawnProperty.spawnedItems[i].transform.position, spawnPosition);
 
-            if (distanceBetweenFlares < minDistanceBetweenFlare)
+            if (distanceBetweenItem < itemToSpawnProperty.minDistanceBetweenItem)
             {
                 return false;
             }
