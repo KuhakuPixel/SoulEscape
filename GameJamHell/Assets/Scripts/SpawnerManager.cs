@@ -68,18 +68,19 @@ public class SpawnerManager : MonoBehaviour
 
         float xSpawnPosition = Random.Range(xStart, xEnd);
         float ySpawnPosition = Random.Range(yStart, yEnd);
-        Vector2 SpawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
+        Vector2 spawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
 
-        bool spawnPositionIsValid = IsSpawnPositionValid(itemToSpawnProperty,SpawnPosition);
+        bool spawnPositionIsValid = IsSpawnPositionValid(itemToSpawnProperty,spawnPosition);
         while (!spawnPositionIsValid)
         {
+            Debug.Log("Spawn position is is not valid while trying to spawn: " + itemToSpawnProperty.itemPrefab.name + " at :" + spawnPosition);
             xSpawnPosition = Random.Range(xStart, xEnd);
             ySpawnPosition = Random.Range(yStart, yEnd);
-            SpawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
-            spawnPositionIsValid = IsSpawnPositionValid(itemToSpawnProperty,SpawnPosition);
+            spawnPosition = new Vector2(xSpawnPosition, ySpawnPosition);
+            spawnPositionIsValid = IsSpawnPositionValid(itemToSpawnProperty,spawnPosition);
 
         }
-        return SpawnPosition;
+        return spawnPosition;
     }
 
     /// <summary>
@@ -96,6 +97,12 @@ public class SpawnerManager : MonoBehaviour
             {
                 return false;
             }
+        }
+        //spawn phyiscs 2d collider to check if there is nearby collider
+        Collider2D[] nearbyColliders=Physics2D.OverlapCircleAll(spawnPosition, itemToSpawnProperty.GetItemColliderRadius());
+        if (nearbyColliders.Length > 0)
+        {
+            return false;
         }
         return true;
     }
