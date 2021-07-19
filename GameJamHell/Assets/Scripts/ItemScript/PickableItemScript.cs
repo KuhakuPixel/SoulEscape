@@ -9,10 +9,18 @@ public class PickableItemScript : MonoBehaviour
 {
     private PickableItemSpawnProperty itemProperty;
     public UnityEvent onItemPickedUp;
-    PlayerScript playerScript;
+   
     public void InitializeItemProperty(PickableItemSpawnProperty itemProperty)
     {
-        this.itemProperty = itemProperty;
+        if (itemProperty != null)
+        {
+            this.itemProperty = itemProperty;
+        }
+        else
+        {
+            Debug.LogError("itemProperty is null");
+        }
+      
     }
     public void DestroyObjectFromScene()
     {

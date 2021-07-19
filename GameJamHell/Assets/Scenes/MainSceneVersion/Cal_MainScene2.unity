@@ -33208,6 +33208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper
       objectReference: {fileID: 0}
+    - target: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1342570404768036807, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -35398,6 +35402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flare 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1867109448245842322, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3581750143188965126, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -36430,6 +36438,10 @@ PrefabInstance:
     - target: {fileID: 1867109448245842322, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
       propertyPath: m_Name
       value: Flare 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1867109448245842322, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3581750143188965126, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
       propertyPath: m_RootOrder
@@ -38101,6 +38113,10 @@ PrefabInstance:
     - target: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
       propertyPath: m_Name
       value: Paper (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1342570404768036807, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
       propertyPath: m_RootOrder
