@@ -50,6 +50,10 @@ public class SpawnerManager : MonoBehaviour
 
     
         GameObject newItem = GameObject.Instantiate(itemToSpawnProperty.itemPrefab, new Vector3(spawnPosition.x, spawnPosition.y, 0f), itemToSpawnProperty.itemPrefab.transform.rotation);
+        if (!newItem.activeSelf)
+        {
+            newItem.SetActive(true);
+        }
         newItem.GetComponent<PickableItemScript>().InitializeItemProperty(itemToSpawnProperty);
         itemToSpawnProperty.spawnedItems.Add(newItem);
         Debug.Log("Sucsessfully spawned: " + itemToSpawnProperty.itemPrefab.name +" at: "+spawnPosition);
