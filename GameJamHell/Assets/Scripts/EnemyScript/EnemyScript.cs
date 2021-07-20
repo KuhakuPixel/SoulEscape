@@ -78,6 +78,7 @@ public class EnemyScript : MonoBehaviour
 
         if (enemyDestinationSetter.target!=null)
         {
+            onMonsterWalking.Invoke();
             Vector3 currentEnemyPosition = enemyDestinationSetter.target.position;
             if (currentEnemyPosition.x<transform.position.x)
             {
