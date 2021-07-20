@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using Pathfinding;
 public class GameManager : MonoBehaviour
 {
+    public bool isGameStarting = false;
     public UnityEvent onGameOver;
     public UnityEvent onGameStart;
     PlayerScript playerScript;

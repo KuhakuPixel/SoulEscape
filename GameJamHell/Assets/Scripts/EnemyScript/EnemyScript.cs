@@ -5,6 +5,7 @@ using Pathfinding;
 using UnityEngine.Events;
 public class EnemyScript : MonoBehaviour
 {
+    public GameManager gameManager;
     public float captureRadius=0f;
     AIDestinationSetter enemyDestinationSetter;
     PlayerScript playerScript;
@@ -78,7 +79,9 @@ public class EnemyScript : MonoBehaviour
 
         if (enemyDestinationSetter.target!=null)
         {
-            onMonsterWalking.Invoke();
+            if(gameManager.isGameStarting) {
+                onMonsterWalking.Invoke();
+            }
             Vector3 currentEnemyPosition = enemyDestinationSetter.target.position;
             if (currentEnemyPosition.x<transform.position.x)
             {

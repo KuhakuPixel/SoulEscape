@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour
 {
+    public GameManager gameManager;
     public PlayerScript playerScript;
     public GameObject mainMenu;
     public GameObject gameOver;
@@ -39,6 +40,7 @@ public class UIScript : MonoBehaviour
     }
 
     public void StartClick() {
+        gameManager.isGameStarting = true;
         Time.timeScale = 1;
         mainMenu.SetActive(false);
         hud.SetActive(true);
@@ -58,12 +60,14 @@ public class UIScript : MonoBehaviour
     }
 
     public void ShowGameOver() {
+        gameManager.isGameStarting = false;
         Time.timeScale = 0;
         hud.SetActive(false);
         gameOver.SetActive(true);
     }
 
     public void ShowVictoryPanel() {
+        gameManager.isGameStarting = false;
         Time.timeScale = 0;
         hud.SetActive(false);
         victory.SetActive(true);
