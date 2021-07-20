@@ -34711,6 +34711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1342570404768036807, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -37996,7 +38000,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   selectedPuppet: {fileID: 481399139}
-  amountOfPaperToStartGenerator: 2
+  amountOfPaperToStartGenerator: 0
   door: {fileID: 9300556}
 --- !u!114 &1802679670
 MonoBehaviour:
@@ -38010,7 +38014,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa51730c96c56824e906c931bc8a962b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &1851160670
 GameObject:
   m_ObjectHideFlags: 0
@@ -38204,8 +38214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723880794d9db6b4793f510dc255e64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flareTimeExpires: 5
   uiScript: {fileID: 2059518131}
   keyToUnsealPuppet: 101
+  keyToPutFlare: 102
   onSelectingSealedPuppet:
     m_PersistentCalls:
       m_Calls: []
@@ -38219,7 +38231,7 @@ MonoBehaviour:
   - {fileID: 1182794592}
   - {fileID: 560208751}
   selectedPuppet: {fileID: 481399139}
-  flareCount: 0
+  flareCount: 5
   onPlayerPickedUpFlare:
     m_PersistentCalls:
       m_Calls:
@@ -38235,7 +38247,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  paperCount: 0
+  onPlayerPutFlare:
+    m_PersistentCalls:
+      m_Calls: []
+  paperCount: 2
   onPlayerPickedUpPaper:
     m_PersistentCalls:
       m_Calls:
@@ -38252,6 +38267,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   lightTransform: {fileID: 654912257}
+  spawnerManager: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!1 &1949291490
 GameObject:
   m_ObjectHideFlags: 0
@@ -39623,6 +39640,10 @@ PrefabInstance:
     - target: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
       propertyPath: m_Name
       value: Paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1342570404768036807, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
       propertyPath: m_RootOrder
