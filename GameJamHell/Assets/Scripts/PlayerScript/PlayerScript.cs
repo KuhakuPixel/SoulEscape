@@ -33,6 +33,8 @@ public class PlayerScript : MonoBehaviour
     public SpawnerManager spawnerManager;
     bool canPutFlare = true;
     float time;
+
+    public AudioManager audioManager;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -86,6 +88,10 @@ public class PlayerScript : MonoBehaviour
         selectedPuppet.MovePuppet(inputVector, playerSpeed);
 
         lightTransform.position = selectedPuppet.transform.position;
+
+        if(inputVector != Vector2.zero) {
+            // TODO : play footstep sfx
+        }
 
         // put flare logic
         if(Input.GetKeyDown(keyToPutFlare) && canPutFlare && flareCount > 0) {
@@ -191,6 +197,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     public void PutFlare() {
+        audioManager.Play("flare_on");
         flareCount--;
         GameObject spawnedFlare=spawnerManager.SpawnFlare(selectedPuppet.transform.position);
         spawnedFlare.GetComponent<Light2D>().enabled=true;

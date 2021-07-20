@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class Generator : MonoBehaviour
 {
+    public AudioManager audioManager;
     public Transform detectionPoint;
     [HideInInspector]public int amountOfPaperToStartGenerator = 0;
     public  float detectionRadius = 0.2f;
@@ -38,6 +39,7 @@ public class Generator : MonoBehaviour
                 if (CanPlayerStartGenerator() && !onGeneratorDoneHasBeenCalled)
                 {
                     onGeneratorStart.Invoke();
+                    // audioManager.Play("generator_running");
                 }
                 else
                 {
@@ -49,6 +51,8 @@ public class Generator : MonoBehaviour
             else
             {
                 onGeneratorRelease.Invoke();
+                // audioManager.Stop("generator_running");
+
             }
         }
     }
@@ -66,7 +70,7 @@ public class Generator : MonoBehaviour
     {
         if (!onGeneratorDoneHasBeenCalled){
             onGeneratorDoneHasBeenCalled = true;
-         
+            audioManager.Play("door_open");
             onGeneratorDone.Invoke();
         }
       

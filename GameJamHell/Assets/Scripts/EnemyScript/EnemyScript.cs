@@ -15,6 +15,8 @@ public class EnemyScript : MonoBehaviour
     public UnityEvent onPuppetCaptured;
     public UnityEvent onTurningOffFlare;
     private SpriteRenderer enemySprite;
+
+    public AudioManager audioManager;
     void OnDrawGizmosSelected()
     {
         // Display the explosion radius when selected
@@ -41,6 +43,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //logic:seal first the firstly chased target before chasing the another one
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, captureRadius);
         foreach (Collider2D collider in colliders)
@@ -64,6 +67,7 @@ public class EnemyScript : MonoBehaviour
             //fooled lol
             else if (collider.tag == "Flare"  && GetCurrentlyChasedGameObject().tag=="Flare")
             {
+                audioManager.Play("flare_off");
                 Debug.Log("Rechase Player");
                 SetChase(playerScript.selectedPuppet.transform);
                 Destroy(collider.gameObject);
