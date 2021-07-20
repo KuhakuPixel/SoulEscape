@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
    
     public UIScript uiScript;
     public KeyCode keyToUnsealPuppet = KeyCode.E;
+    public KeyCode keyToPutFlare = KeyCode.F;
     /// <summary>
     /// Invoked when select a sealed puppet
     /// </summary>
@@ -22,10 +23,16 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector]public Puppet selectedPuppet;
     public int flareCount = 0;
     public UnityEvent onPlayerPickedUpFlare;
+    public UnityEvent onPlayerPutFlare;
      public int paperCount = 0;
     public UnityEvent onPlayerPickedUpPaper;
 
     public Transform lightTransform;
+
+    // public GameObject flarePrefab;
+    public SpawnerManager spawnerManager;
+    bool canPutFlare = true;
+    float time;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -49,7 +56,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // select doll based on input
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SelectNewDoll(0);
@@ -67,6 +74,8 @@ public class PlayerScript : MonoBehaviour
         {
             SelectNewDoll(3);
         }
+
+        // movement
         Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         if (inputVector.magnitude > 1)
@@ -76,6 +85,21 @@ public class PlayerScript : MonoBehaviour
         selectedPuppet.MovePuppet(inputVector, playerSpeed);
 
         lightTransform.position = selectedPuppet.transform.position;
+
+        // put flare logic
+        if(Input.GetKeyDown(keyToPutFlare) && canPutFlare && flareCount > 0) {
+            // canPutFlare = false;
+            // flareCount--;
+            time = Time.time;
+            PutFlare();
+
+            // GameObject flare = GameObject.Instantiate(flarePrefab, selectedPuppet.transform.position, Quaternion.identity);
+            // flare.transform.position = selectedPuppet.transform.position;
+            // flare.name = "Flare from player";
+            // flare.SetActive(true);
+            // spawn flare at current position
+            // add light
+        }
 
     }
     Puppet.PuppetColors PuppetIndexToEnum(int index)
@@ -164,6 +188,13 @@ public class PlayerScript : MonoBehaviour
         flareCount++;
         onPlayerPickedUpFlare.Invoke();
     }
+
+    public void PutFlare() {
+        flareCount--;
+        spawnerManager.SpawnFlare(selectedPuppet.transform.position);
+        onPlayerPutFlare.Invoke();
+    }
+
     public void PickUpPaper()
     {
         paperCount++;

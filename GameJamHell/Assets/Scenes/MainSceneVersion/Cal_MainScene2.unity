@@ -33325,6 +33325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiScript: {fileID: 1858836290}
   keyToUnsealPuppet: 101
+  keyToPutFlare: 102
   onSelectingSealedPuppet:
     m_PersistentCalls:
       m_Calls: []
@@ -33340,6 +33341,21 @@ MonoBehaviour:
   selectedPuppet: {fileID: 296999409}
   flareCount: 0
   onPlayerPickedUpFlare:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1858836290}
+        m_TargetAssemblyTypeName: UIScript, Assembly-CSharp
+        m_MethodName: UpdateFlareCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerPutFlare:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1858836290}
@@ -33371,6 +33387,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   lightTransform: {fileID: 455277778}
+  spawnerManager: {fileID: 1566383819}
 --- !u!4 &908264211
 Transform:
   m_ObjectHideFlags: 0

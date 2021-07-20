@@ -60,4 +60,8 @@ public class PickableItemScript : MonoBehaviour
             playerScript.PickUpPaper();
         }
     }
+
+    public void SetScriptEnabled(bool enabled) {
+        this.enabled = enabled;
+    }
 }

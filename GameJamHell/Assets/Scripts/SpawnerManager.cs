@@ -28,6 +28,12 @@ public class SpawnerManager : MonoBehaviour
         {
            SpawnItemRandomly(paperSpawnProperty);
         }
+
+        // spawn flare
+        for(int i = 0; i < flareSpawnProperty.maxSpawnCount; i++)
+        {
+           SpawnItemRandomly(flareSpawnProperty);
+        }
         
     }
     // Update is called once per frame
@@ -35,14 +41,15 @@ public class SpawnerManager : MonoBehaviour
     {
         //making sure there will be x number of flare always
 
-        while (flareSpawnProperty.spawnedItems.Count<flareSpawnProperty.maxSpawnCount)
-        {
-            SpawnItemRandomly(flareSpawnProperty);
-        }
+        // while (flareSpawnProperty.spawnedItems.Count<flareSpawnProperty.maxSpawnCount)
+        // {
+        //     SpawnItemRandomly(flareSpawnProperty);
+        // }
 
-        // TODO : move flare spawn to Start
+        // TODO : move flare spawn to Start()
         //        keeping the number of flares in game 
-        //        constant
+        //        constant between the ones the puppet hold 
+        //        and the others that are still scattered
        
     }
 
@@ -61,10 +68,19 @@ public class SpawnerManager : MonoBehaviour
         newItem.GetComponent<PickableItemScript>().InitializeItemProperty(itemToSpawnProperty);
         itemToSpawnProperty.spawnedItems.Add(newItem);
         Debug.Log("Sucsessfully spawned: " + itemToSpawnProperty.itemPrefab.name +" at: "+spawnPosition);
-       
 
+    }
 
-
+    public void SpawnFlare(Vector2 position) {
+        GameObject newItem = GameObject.Instantiate(flareSpawnProperty.itemPrefab, position, flareSpawnProperty.itemPrefab.transform.rotation);
+        if (!newItem.activeSelf)
+        {
+            newItem.SetActive(true);
+        }
+        newItem.GetComponent<PickableItemScript>().InitializeItemProperty(flareSpawnProperty);
+        newItem.name = "Flare from player";
+        newItem.GetComponent<CircleCollider2D>().enabled = false;
+        flareSpawnProperty.spawnedItems.Add(newItem);
     }
 
     Vector2 GetRandomItemSpawnCoordinate(PickableItemSpawnProperty itemToSpawnProperty)
