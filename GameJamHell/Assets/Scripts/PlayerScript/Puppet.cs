@@ -66,6 +66,9 @@ public class Puppet : MonoBehaviour
 
                     }
                 }
+                else if(collider.tag == "Door") {
+                    Debug.Log("Win");
+                }
                 //moved to PickableItemScript.cs 
                 /*
                 else if(collider.tag == "Flare") {
@@ -76,9 +79,6 @@ public class Puppet : MonoBehaviour
                 else if (collider.tag == "Paper") {
                     collider.gameObject.SetActive(false);
                     playerScript.PickUpPaper();
-                }
-                else if(collider.tag == "Door") {
-                    Debug.Log("Win");
                 }
                 */
             }

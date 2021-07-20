@@ -39,6 +39,10 @@ public class SpawnerManager : MonoBehaviour
         {
             SpawnItemRandomly(flareSpawnProperty);
         }
+
+        // TODO : move flare spawn to Start
+        //        keeping the number of flares in game 
+        //        constant
        
     }
 

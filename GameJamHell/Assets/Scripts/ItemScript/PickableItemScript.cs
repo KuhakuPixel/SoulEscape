@@ -8,7 +8,15 @@ using UnityEngine.Events;
 public class PickableItemScript : MonoBehaviour
 {
     private PickableItemSpawnProperty itemProperty;
-    public UnityEvent onItemPickedUp;
+    public UnityEvent<string> onItemPickedUp;
+
+    PlayerScript playerScript;
+
+    public void Start() {
+        playerScript = GameObject.FindObjectOfType<PlayerScript>();
+
+        onItemPickedUp.AddListener(ItemPickUp);
+    }
    
     public void InitializeItemProperty(PickableItemSpawnProperty itemProperty)
     {
@@ -38,9 +46,18 @@ public class PickableItemScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            onItemPickedUp.Invoke();
+            onItemPickedUp.Invoke(this.tag);
             DestroyObjectFromScene();
       
+        }
+    }
+
+    void ItemPickUp(string tag) {
+        if(tag == "Flare") {
+            playerScript.PickUpFlare();
+        }
+        else if(tag == "Paper") {
+            playerScript.PickUpPaper();
         }
     }
 }

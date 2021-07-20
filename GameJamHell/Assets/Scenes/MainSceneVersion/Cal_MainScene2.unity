@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LightType: 3
-  m_BlendStyleIndex: 0
+  m_BlendStyleIndex: 2
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
@@ -1082,7 +1082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457648248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.35, z: 0}
+  m_LocalPosition: {x: 0, y: 0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1604688754}
@@ -1931,20 +1931,56 @@ PrefabInstance:
       value: Generator
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: progressBar
+      value: 
+      objectReference: {fileID: 1997096917}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1566383816}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1997096917}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnGeneratorComplete
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
@@ -38052,8 +38088,8 @@ MonoBehaviour:
     itemPrefab: {fileID: 1867109448245842322, guid: 137340954eebf544d831e16cce2f2dd0, type: 3}
     spawnedItems: []
   paperSpawnProperty:
-    maxSpawnCount: 2
-    minDistanceBetweenItem: 4
+    maxSpawnCount: 4
+    minDistanceBetweenItem: 2
     itemPrefab: {fileID: 1342570404768036802, guid: a717f459bcf9ba20bab05eef48a1a945, type: 3}
     spawnedItems: []
 --- !u!1 &1604688753
@@ -39225,6 +39261,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1997096917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 20826707428511328, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+  m_PrefabInstance: {fileID: 608955069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2015805816
 PrefabInstance:
   m_ObjectHideFlags: 0
