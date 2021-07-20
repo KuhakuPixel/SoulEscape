@@ -68,6 +68,7 @@ public class Puppet : MonoBehaviour
                 }
                 else if(collider.tag == "Door") {
                     Debug.Log("Win");
+                    playerScript.onPlayerWin.Invoke();
                 }
                 //moved to PickableItemScript.cs 
                 /*
