@@ -21,11 +21,11 @@ public class ProgressBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            StartFillingProgressBar(15f);
-        }
-        //every 60 s add 1/timeToMakeBarFull
+       // //if (Input.GetKeyDown(KeyCode.G))
+        //{
+       //     StartFillingProgressBar(15f);
+      //  }
+       
         if (startFilling)
         {
             slider.value += (1 / timeToMakeBarFull) * Time.deltaTime;
