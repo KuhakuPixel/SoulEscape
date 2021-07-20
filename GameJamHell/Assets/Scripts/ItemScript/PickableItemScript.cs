@@ -10,7 +10,7 @@ public class PickableItemScript : MonoBehaviour
 {
     private PickableItemSpawnProperty itemProperty;
     public UnityEvent<string> onItemPickedUp;
-    private bool isItemPickable = false;
+    private bool isItemPickable = true;
     PlayerScript playerScript;
 
     public bool IsItemPickable {set => isItemPickable = value; }
