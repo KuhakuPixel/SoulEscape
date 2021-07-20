@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
 /// <summary>
 /// used for flare and paper since behaviour is similiar
 /// </summary>
@@ -9,8 +10,10 @@ public class PickableItemScript : MonoBehaviour
 {
     private PickableItemSpawnProperty itemProperty;
     public UnityEvent<string> onItemPickedUp;
-
+    private bool isItemPickable = false;
     PlayerScript playerScript;
+
+    public bool IsItemPickable {set => isItemPickable = value; }
 
     public void Start() {
         playerScript = GameObject.FindObjectOfType<PlayerScript>();
@@ -46,13 +49,19 @@ public class PickableItemScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            onItemPickedUp.Invoke(this.tag);
-            DestroyObjectFromScene();
-      
+            if (isItemPickable)
+            {
+                onItemPickedUp.Invoke(this.tag);
+                DestroyObjectFromScene();
+
+            }
+
         }
     }
 
     void ItemPickUp(string tag) {
+        
+
         if(tag == "Flare") {
             playerScript.PickUpFlare();
         }

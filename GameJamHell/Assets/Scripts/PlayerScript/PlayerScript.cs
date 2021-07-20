@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.Experimental.Rendering.Universal;
 public class PlayerScript : MonoBehaviour
 {
    
@@ -40,6 +40,7 @@ public class PlayerScript : MonoBehaviour
         {
             throw new System.ArgumentException("Puppet must be 4");
         }
+        spawnerManager = FindObjectOfType<SpawnerManager>();
     }
     void Start()
     {
@@ -191,7 +192,15 @@ public class PlayerScript : MonoBehaviour
 
     public void PutFlare() {
         flareCount--;
-        spawnerManager.SpawnFlare(selectedPuppet.transform.position);
+        GameObject spawnedFlare=spawnerManager.SpawnFlare(selectedPuppet.transform.position);
+        spawnedFlare.GetComponent<Light2D>().enabled=true;
+        spawnedFlare.GetComponent<PickableItemScript>().IsItemPickable = false;
+        EnemyScript[] enemies=FindObjectsOfType<EnemyScript>();
+        //fool the enemy pls
+        for(int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].SetChase(spawnedFlare.transform);
+        }
         onPlayerPutFlare.Invoke();
     }
 

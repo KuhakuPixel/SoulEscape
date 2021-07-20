@@ -14,7 +14,7 @@ public class Generator : MonoBehaviour
     public UnityEvent onGeneratorDone;
     public KeyCode keyToWorkOnGenerator = KeyCode.G;
     PlayerScript playerScript;
-    public GameObject progressBar;
+   
 
     private bool onGeneratorDoneHasBeenCalled = false;
     void OnDrawGizmosSelected()
@@ -66,10 +66,10 @@ public class Generator : MonoBehaviour
     {
         if (!onGeneratorDoneHasBeenCalled){
             onGeneratorDoneHasBeenCalled = true;
-            progressBar.SetActive(false);
+         
             onGeneratorDone.Invoke();
         }
-        else{}
+      
 
     }
     

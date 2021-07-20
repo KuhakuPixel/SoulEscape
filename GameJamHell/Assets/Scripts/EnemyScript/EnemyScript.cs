@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     /// called when enemy captured the puppet
     /// </summary>
     public UnityEvent onPuppetCaptured;
+    public UnityEvent onTurningOffFlare;
     private SpriteRenderer enemySprite;
     void OnDrawGizmosSelected()
     {
@@ -29,6 +30,14 @@ public class EnemyScript : MonoBehaviour
         enemySprite = GetComponent<SpriteRenderer>();
     }
 
+    public void SetChase(Transform target)
+    {
+        this.enemyDestinationSetter.target = target;
+    }
+    GameObject GetCurrentlyChasedGameObject()
+    {
+        return this.enemyDestinationSetter.target.gameObject;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -45,14 +54,20 @@ public class EnemyScript : MonoBehaviour
                     puppet.CapturePuppet();
                     onPuppetCaptured.Invoke();
                     //after sealed ,chase the player next
-                    enemyDestinationSetter.target = playerScript.selectedPuppet.transform;
+                    SetChase(playerScript.selectedPuppet.transform);
                 }
-           
-
-
+ 
                
 
                 
+            }
+            //fooled lol
+            else if (collider.tag == "Flare"  && GetCurrentlyChasedGameObject().tag=="Flare")
+            {
+                Debug.Log("Rechase Player");
+                SetChase(playerScript.selectedPuppet.transform);
+                Destroy(collider.gameObject);
+                onTurningOffFlare.Invoke();
             }
         }
 
@@ -69,5 +84,6 @@ public class EnemyScript : MonoBehaviour
             }
         }
     }
+
 
 }

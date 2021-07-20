@@ -71,16 +71,19 @@ public class SpawnerManager : MonoBehaviour
 
     }
 
-    public void SpawnFlare(Vector2 position) {
+    public GameObject SpawnFlare(Vector2 position) {
         GameObject newItem = GameObject.Instantiate(flareSpawnProperty.itemPrefab, position, flareSpawnProperty.itemPrefab.transform.rotation);
         if (!newItem.activeSelf)
         {
             newItem.SetActive(true);
         }
         newItem.GetComponent<PickableItemScript>().InitializeItemProperty(flareSpawnProperty);
+        
         newItem.name = "Flare from player";
-        newItem.GetComponent<CircleCollider2D>().enabled = false;
+        
+        //newItem.GetComponent<CircleCollider2D>().enabled = false;
         flareSpawnProperty.spawnedItems.Add(newItem);
+        return newItem;
     }
 
     Vector2 GetRandomItemSpawnCoordinate(PickableItemSpawnProperty itemToSpawnProperty)
