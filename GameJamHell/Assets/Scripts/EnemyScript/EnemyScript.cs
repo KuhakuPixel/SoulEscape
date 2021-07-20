@@ -20,6 +20,7 @@ public class EnemyScript : MonoBehaviour
     private SpriteRenderer enemySprite;
 
     public AudioManager audioManager;
+    bool isOnDelay = false;
     void OnDrawGizmosSelected()
     {
         // Display the explosion radius when selected
@@ -36,8 +37,9 @@ public class EnemyScript : MonoBehaviour
     }
     IEnumerator SetChaseCoroutine(Transform target, float timeDelay)
     {
-
+        isOnDelay = true;
         yield return new WaitForSeconds(timeDelay);
+        isOnDelay = false;
         this.enemyDestinationSetter.target = target;
 
     }
@@ -87,7 +89,7 @@ public class EnemyScript : MonoBehaviour
 
         if (enemyDestinationSetter.target!=null)
         {
-            if(gameManager.isGameStarting) {
+            if(gameManager.isGameStarting && !isOnDelay) {
                 onMonsterWalking.Invoke();
             }
             Vector3 currentEnemyPosition = enemyDestinationSetter.target.position;

@@ -1761,12 +1761,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3265158638102603618, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
+      propertyPath: timeDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265158638102603618, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1566383816}
-      propertyPath: timeDelay
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3265158638102603618, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: audioManager
       value: 
@@ -38024,7 +38025,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   selectedPuppet: {fileID: 296999409}
-  amountOfPaperToStartGenerator: 0
+  amountOfPaperToStartGenerator: 4
   door: {fileID: 1388391350}
 --- !u!4 &1566383817
 Transform:
@@ -38195,7 +38196,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: flare_off
     clip: {fileID: 8300000, guid: 15467fad0871d8c4a87322e9381fe213, type: 3}
-    volume: 0.732
+    volume: 0.806
     pitch: 1
     loop: 0
     source: {fileID: 0}
