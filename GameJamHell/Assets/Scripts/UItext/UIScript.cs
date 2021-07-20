@@ -12,6 +12,7 @@ public class UIScript : MonoBehaviour
     public GameObject mainMenu;
     public GameObject gameOver;
     public GameObject hud;
+    public GameObject victory;
 
     public Text flareText;
     public Text paperText;
@@ -26,6 +27,7 @@ public class UIScript : MonoBehaviour
        mainMenu.SetActive(true);
        gameOver.SetActive(false);
        hud.SetActive(false);
+       victory.SetActive(false);
 
        Time.timeScale = 0;
     }
@@ -59,6 +61,12 @@ public class UIScript : MonoBehaviour
         Time.timeScale = 0;
         hud.SetActive(false);
         gameOver.SetActive(true);
+    }
+
+    public void ShowVictoryPanel() {
+        Time.timeScale = 0;
+        hud.SetActive(false);
+        victory.SetActive(true);
     }
 
     public void DisableIcon(Puppet.PuppetColors puppetColor) {

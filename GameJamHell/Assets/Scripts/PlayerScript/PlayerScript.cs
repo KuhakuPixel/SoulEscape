@@ -9,10 +9,11 @@ public class PlayerScript : MonoBehaviour
     public UIScript uiScript;
     public KeyCode keyToUnsealPuppet = KeyCode.E;
     public KeyCode keyToPutFlare = KeyCode.F;
+    public UnityEvent onPlayerMove;
+    public UnityEvent onPlayerWin;
     /// <summary>
     /// Invoked when select a sealed puppet
     /// </summary>
-    public UnityEvent onPlayerMove;
     public UnityEvent onSelectingSealedPuppet;
 
     /// <summary>
