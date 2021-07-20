@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.Experimental.Rendering.Universal;
 public class PlayerScript : MonoBehaviour
 {
-   
+    public float flareTimeExpires;
     public UIScript uiScript;
     public KeyCode keyToUnsealPuppet = KeyCode.E;
     public KeyCode keyToPutFlare = KeyCode.F;
@@ -208,7 +208,9 @@ public class PlayerScript : MonoBehaviour
         {
             enemies[i].SetChase(spawnedFlare.transform);
         }
+        Destroy(spawnedFlare, flareTimeExpires);
         onPlayerPutFlare.Invoke();
+        
     }
 
     public void PickUpPaper()
