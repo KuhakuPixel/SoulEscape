@@ -2020,21 +2020,9 @@ PrefabInstance:
       value: Generator
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
-      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1566383816}
-    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
-      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnGeneratorComplete
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
-      propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
 --- !u!4 &608955070 stripped
@@ -37929,7 +37917,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   selectedPuppet: {fileID: 296999409}
-  amountOfPaperToStartGenerator: 2
+  amountOfPaperToStartGenerator: 0
   door: {fileID: 1388391350}
 --- !u!4 &1566383817
 Transform:

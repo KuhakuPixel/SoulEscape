@@ -8,7 +8,8 @@ public class Generator : MonoBehaviour
     [HideInInspector]public int amountOfPaperToStartGenerator = 0;
     public  float detectionRadius = 0.2f;
     public LayerMask detectionLayer;
-    public UnityEvent onGeneratorInteraction;
+    public UnityEvent onGeneratorStart;
+    public UnityEvent onGeneratorStartFail;
     public UnityEvent onGeneratorRelease;
     public UnityEvent onGeneratorDone;
     public KeyCode keyToWorkOnGenerator = KeyCode.G;
@@ -29,16 +30,17 @@ public class Generator : MonoBehaviour
     {
         if(DetectObject())
         {
-            Debug.Log("Player is nearby generator");
+            //Debug.Log("Player is nearby generator");
             
             if (Input.GetKey(keyToWorkOnGenerator))
             {
                 if (CanPlayerStartGenerator())
                 {
-                    onGeneratorInteraction.Invoke();
+                    onGeneratorStart.Invoke();
                 }
                 else
                 {
+                    onGeneratorStartFail.Invoke();
                     Debug.Log("Not enough paper");
                 }
                

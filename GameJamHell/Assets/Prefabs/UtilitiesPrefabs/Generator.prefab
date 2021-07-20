@@ -186,8 +186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.009298325, y: 0.61893845}
-  m_SizeDelta: {x: 1919.9999, y: 1566.7198}
+  m_AnchoredPosition: {x: -0.516, y: 0.8923}
+  m_SizeDelta: {x: 1153, y: 872.7435}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &20826707428511333
 Canvas:
@@ -277,7 +277,7 @@ RectTransform:
   m_GameObject: {fileID: 20826707584183267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 20826707775578603}
   - {fileID: 20826708268468766}
@@ -287,7 +287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 958.08026, y: -825}
+  m_AnchoredPosition: {x: 893, y: -851}
   m_SizeDelta: {x: 780, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20826707584183265
@@ -620,9 +620,21 @@ MonoBehaviour:
   detectionLayer:
     serializedVersion: 2
     m_Bits: 8
-  onGeneratorInteraction:
+  onGeneratorStart:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 20826707584183264}
+        m_TargetAssemblyTypeName: ProgressBarScript, Assembly-CSharp
+        m_MethodName: StartFillingProgressBar
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 20826707428511328}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -635,18 +647,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 20826707584183264}
-        m_TargetAssemblyTypeName: ProgressBarScript, Assembly-CSharp
-        m_MethodName: StartFillingProgressBar
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 5
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+  onGeneratorStartFail:
+    m_PersistentCalls:
+      m_Calls: []
   onGeneratorRelease:
     m_PersistentCalls:
       m_Calls:
@@ -666,9 +669,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: OurDebugger, Assembly-CSharp
-        m_MethodName: DebugLog
-        m_Mode: 5
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnGeneratorComplete
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
