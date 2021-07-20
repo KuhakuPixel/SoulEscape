@@ -1951,6 +1951,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -1971,6 +1975,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1997096917}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorStart.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1676191493}
@@ -1978,6 +1986,10 @@ PrefabInstance:
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1676191493}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnGeneratorComplete
@@ -1995,6 +2007,14 @@ PrefabInstance:
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -2004,6 +2024,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorStart.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: AudioManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
@@ -2019,11 +2043,19 @@ PrefabInstance:
       value: generator_running
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: generator_running
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorDone.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
       propertyPath: onGeneratorStart.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533137232153749847, guid: b64c28e205efd494aac41afe3bacff16, type: 3}
+      propertyPath: onGeneratorRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
