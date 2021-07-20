@@ -83,6 +83,10 @@ public class EnemyScript : MonoBehaviour
                 enemySprite.flipX = false;
             }
         }
+        else
+        {
+            SetChase(playerScript.selectedPuppet.transform);
+        }
     }
 
 
