@@ -1813,7 +1813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3265158638102603627, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
@@ -33342,6 +33342,21 @@ MonoBehaviour:
   uiScript: {fileID: 1858836290}
   keyToUnsealPuppet: 101
   keyToPutFlare: 102
+  onPlayerMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1676191493}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: puppet_walk
+          m_BoolArgument: 0
+        m_CallState: 2
   onSelectingSealedPuppet:
     m_PersistentCalls:
       m_Calls: []
@@ -38114,13 +38129,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: flare_on
     clip: {fileID: 8300000, guid: 516a5c0b80eefd04abc6c9e329ed7280, type: 3}
-    volume: 1
+    volume: 0.641
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: flare_off
     clip: {fileID: 8300000, guid: 15467fad0871d8c4a87322e9381fe213, type: 3}
-    volume: 1
+    volume: 0.732
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -38132,7 +38147,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: bgm
     clip: {fileID: 8300000, guid: 5c8b25797026d784e8b0fae5104d42ea, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}

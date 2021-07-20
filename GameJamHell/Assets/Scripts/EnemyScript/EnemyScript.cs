@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour
     /// <summary>
     /// called when enemy captured the puppet
     /// </summary>
+    public UnityEvent onMonsterWalking;
     public UnityEvent onPuppetCaptured;
     public UnityEvent onTurningOffFlare;
     private SpriteRenderer enemySprite;

@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     /// <summary>
     /// Invoked when select a sealed puppet
     /// </summary>
+    public UnityEvent onPlayerMove;
     public UnityEvent onSelectingSealedPuppet;
 
     /// <summary>
@@ -91,6 +92,7 @@ public class PlayerScript : MonoBehaviour
 
         if(inputVector != Vector2.zero) {
             // TODO : play footstep sfx
+            onPlayerMove.Invoke();
         }
 
         // put flare logic
