@@ -61,7 +61,4 @@ public class PickableItemScript : MonoBehaviour
         }
     }
 
-    public void SetScriptEnabled(bool enabled) {
-        this.enabled = enabled;
-    }
 }
