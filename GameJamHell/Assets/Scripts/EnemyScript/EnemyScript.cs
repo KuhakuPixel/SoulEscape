@@ -5,6 +5,7 @@ using Pathfinding;
 using UnityEngine.Events;
 public class EnemyScript : MonoBehaviour
 {
+    public float timeDelay = 0f;
     public float captureRadius=0f;
     AIDestinationSetter enemyDestinationSetter;
     PlayerScript playerScript;
@@ -32,10 +33,17 @@ public class EnemyScript : MonoBehaviour
         animator = GetComponent<Animator>();
         enemySprite = GetComponent<SpriteRenderer>();
     }
+    IEnumerator SetChaseCoroutine(Transform target, float timeDelay)
+    {
+
+        yield return new WaitForSeconds(timeDelay);
+        this.enemyDestinationSetter.target = target;
+
+    }
 
     public void SetChase(Transform target)
     {
-        this.enemyDestinationSetter.target = target;
+        StartCoroutine(SetChaseCoroutine(target,timeDelay));
     }
     GameObject GetCurrentlyChasedGameObject()
     {
@@ -94,6 +102,5 @@ public class EnemyScript : MonoBehaviour
             SetChase(playerScript.selectedPuppet.transform);
         }
     }
-
-
+   
 }

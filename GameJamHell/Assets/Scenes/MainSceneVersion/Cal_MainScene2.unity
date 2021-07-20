@@ -1756,6 +1756,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3265158638102603618, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
+      propertyPath: timeDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265158638102603618, guid: 3ed7c5cd56b201641bdb5d6982304129, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1676191493}
