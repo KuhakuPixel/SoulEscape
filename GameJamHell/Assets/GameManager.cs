@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using Pathfinding;
 public class GameManager : MonoBehaviour
 {
-    public bool isGameStarting = false;
+    public static bool isGameStarting = false;
     public UnityEvent onGameOver;
     public UnityEvent onGameStart;
     PlayerScript playerScript;
@@ -59,5 +59,10 @@ public class GameManager : MonoBehaviour
     public void OnGameOver()
     {
         onGameOver.Invoke();
+    }
+
+    public void SetGameStartVar(bool value) {
+        isGameStarting = value;
+        Debug.Log("is_game_starting " + isGameStarting.ToString());
     }
 }

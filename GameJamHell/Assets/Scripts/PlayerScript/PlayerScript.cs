@@ -48,6 +48,10 @@ public class PlayerScript : MonoBehaviour
     }
     void Start()
     {
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
+
+        onPlayerMove.AddListener(PlayerMove);
+
         //init new doll
         for (int i = 0; i < puppets.Count; i++)
         {
@@ -91,7 +95,7 @@ public class PlayerScript : MonoBehaviour
 
         lightTransform.position = selectedPuppet.transform.position;
 
-        if(inputVector != Vector2.zero) {
+        if(inputVector != Vector2.zero && GameManager.isGameStarting) {
             // TODO : play footstep sfx
             onPlayerMove.Invoke();
         }
@@ -220,5 +224,9 @@ public class PlayerScript : MonoBehaviour
     {
         paperCount++;
         onPlayerPickedUpPaper.Invoke();
+    }
+
+    public void PlayerMove() {
+        audioManager.Play("puppet_walk");
     }
 }

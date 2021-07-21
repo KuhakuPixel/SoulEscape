@@ -26,7 +26,11 @@ public class Generator : MonoBehaviour
     }
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         playerScript =FindObjectOfType<PlayerScript>();
+
+        onGeneratorStart.AddListener(PlayGeneratorSound);
+        onGeneratorRelease.AddListener(StopGeneratorSound);
     }
     void Update()
     {
@@ -80,5 +84,13 @@ public class Generator : MonoBehaviour
     public bool CanPlayerStartGenerator()
     {
         return playerScript.paperCount >= amountOfPaperToStartGenerator;
+    }
+
+    void PlayGeneratorSound() {
+        audioManager.Play("generator_running");
+    }
+
+    void StopGeneratorSound() {
+        audioManager.Stop("generator_running");
     }
 }

@@ -22,15 +22,31 @@ public class UIScript : MonoBehaviour
     public GameObject iconYellow;
     public GameObject iconPurple;
     public GameObject iconGreen;
+
+    public static bool isReloadingGame = false;
     // Start is called before the first frame update
     void Start()
     {
-       mainMenu.SetActive(true);
-       gameOver.SetActive(false);
-       hud.SetActive(false);
-       victory.SetActive(false);
+        if(!isReloadingGame) {
+            mainMenu.SetActive(true);
+            gameOver.SetActive(false);
+            hud.SetActive(false);
+            victory.SetActive(false);
 
-       Time.timeScale = 0;
+            Time.timeScale = 0;
+        }
+        else {
+            // gameManager.SetGameStartVar(true);
+            GameManager.isGameStarting = true;
+            mainMenu.SetActive(false);
+            gameOver.SetActive(false);
+            hud.SetActive(true);
+            victory.SetActive(false);
+
+            Time.timeScale = 1;
+        }
+
+        // DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame
@@ -40,34 +56,39 @@ public class UIScript : MonoBehaviour
     }
 
     public void StartClick() {
-        gameManager.isGameStarting = true;
+        // gameManager.SetGameStartVar(true);
+        GameManager.isGameStarting = true;
         Time.timeScale = 1;
         mainMenu.SetActive(false);
         hud.SetActive(true);
     }
 
     public void RetryClick() {
-        // TODO : reload scene skipping main menu screen
-        gameOver.SetActive(false);
-        hud.SetActive(true);
+        isReloadingGame = true;
+        // gameManager.SetGameStartVar(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitClick() {
+        isReloadingGame = false;
+        GameManager.isGameStarting = false;
+        // gameManager.SetGameStartVar(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // mainMenu.SetActive(true);
         // gameOver.SetActive(false);
     }
 
     public void ShowGameOver() {
-        gameManager.isGameStarting = false;
+        GameManager.isGameStarting = false;
+        // gameManager.SetGameStartVar(false);
         Time.timeScale = 0;
         hud.SetActive(false);
         gameOver.SetActive(true);
     }
 
     public void ShowVictoryPanel() {
-        gameManager.isGameStarting = false;
+        GameManager.isGameStarting = false;
+        // gameManager.SetGameStartVar(false);
         Time.timeScale = 0;
         hud.SetActive(false);
         victory.SetActive(true);

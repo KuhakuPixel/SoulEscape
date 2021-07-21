@@ -30,17 +30,21 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
         playerScript = GameObject.FindObjectOfType<PlayerScript>();
         this.enemyDestinationSetter = this.GetComponent<AIDestinationSetter>();
         animator = GetComponent<Animator>();
         enemySprite = GetComponent<SpriteRenderer>();
+
+        onMonsterWalking.AddListener(MonsterWalking);
+        onTurningOffFlare.AddListener(TurnOffFlare);
     }
     IEnumerator SetChaseCoroutine(Transform target, float timeDelay)
     {
         isOnDelay = true;
         yield return new WaitForSeconds(timeDelay);
-        isOnDelay = false;
         this.enemyDestinationSetter.target = target;
+        isOnDelay = false;
 
     }
 
@@ -79,7 +83,7 @@ public class EnemyScript : MonoBehaviour
             //fooled lol
             else if (collider.tag == "Flare"  && GetCurrentlyChasedGameObject().tag=="Flare")
             {
-                audioManager.Play("flare_off");
+                // audioManager.Play("flare_off");
                 Debug.Log("Rechase Player");
                 SetChase(playerScript.selectedPuppet.transform);
                 Destroy(collider.gameObject);
@@ -89,7 +93,7 @@ public class EnemyScript : MonoBehaviour
 
         if (enemyDestinationSetter.target!=null)
         {
-            if(gameManager.isGameStarting && !isOnDelay) {
+            if(GameManager.isGameStarting && !isOnDelay) {
                 onMonsterWalking.Invoke();
             }
             Vector3 currentEnemyPosition = enemyDestinationSetter.target.position;
@@ -106,6 +110,15 @@ public class EnemyScript : MonoBehaviour
         {
             SetChase(playerScript.selectedPuppet.transform);
         }
+    }
+
+    void MonsterWalking() {
+        Debug.Log("monster walking");
+        audioManager.Play("monster_walk");
+    }
+
+    void TurnOffFlare() {
+        audioManager.Play("flare_off");
     }
    
 }
