@@ -1,2 +1,4 @@
-# Version control for the game jam
-Unity version: 2020.3.13
+# Soul Escape
+
+2D horror escape game
+published at: https://nicholaspixel.itch.io/soulescape
